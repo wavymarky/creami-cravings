@@ -7,19 +7,11 @@
 <link rel="icon" href="logo.svg" type="image/svg+xml">
 <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 <style>
-:root {
-  --pink: #ff6b9d;
-  --yellow: #ffd93d;
-  --mint: #6bcb77;
-  --sky: #4fc3f7;
-  --purple: #c77dff;
-  --orange: #ff9a3c;
-  --coral: #ff6b6b;
-  --bg: #fff9f0;
-  --white: #ffffff;
-  --dark: #1a1a2e;
-  --text: #2d2d2d;
-  --muted: #999;
+:root{
+  --pink:#ff6b9d;--yellow:#ffd93d;--mint:#6bcb77;--sky:#4fc3f7;
+  --purple:#c77dff;--orange:#ff9a3c;--coral:#ff6b6b;
+  --teal:#0891b2;--teal2:#06d6a0;--emerald:#059669;
+  --bg:#fff9f0;--dark:#1a1a2e;--text:#2d2d2d;--muted:#999;
 }
 *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 body{font-family:'Nunito',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;overflow-x:hidden}
@@ -44,104 +36,120 @@ body{font-family:'Nunito',sans-serif;background:var(--bg);color:var(--text);min-
 .cvr-badges{display:flex;gap:.5rem;justify-content:center;margin-top:1.5rem;flex-wrap:wrap}
 .cvr-badge{background:rgba(255,255,255,.92);border-radius:100px;padding:.4rem 1rem;font-size:.75rem;font-weight:800;color:var(--text)}
 .cvr-btn{margin-top:2.2rem;display:inline-flex;align-items:center;gap:.5rem;background:#fff;color:var(--pink);font-weight:900;font-size:.95rem;padding:.85rem 2.2rem;border-radius:100px;box-shadow:0 8px 28px rgba(255,107,157,.4);animation:btnpop 2s ease-in-out infinite;letter-spacing:.02em}
-@keyframes btnpop{0%,100%{transform:scale(1);box-shadow:0 8px 28px rgba(255,107,157,.4)}50%{transform:scale(1.04);box-shadow:0 14px 36px rgba(255,107,157,.55)}}
+@keyframes btnpop{0%,100%{transform:scale(1)}50%{transform:scale(1.04)}}
 
 /* ── HOME SCREEN ── */
 #home{display:none;min-height:100vh;background:var(--bg)}
 #home.on{display:block}
-.home-hdr{background:linear-gradient(135deg,var(--pink),var(--purple));padding:2.5rem 1.5rem 2rem;text-align:center}
-.home-logo-wrap{display:flex;align-items:center;justify-content:center;gap:.75rem;margin-bottom:.5rem}
-.home-logo{width:48px;height:48px;border-radius:50%;box-shadow:0 4px 16px rgba(0,0,0,.2)}
-.home-title{font-family:'Righteous',cursive;font-size:1.9rem;color:#fff;letter-spacing:.04em;text-shadow:2px 2px 0 rgba(0,0,0,.1)}
-.home-sub{font-size:.72rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.75);margin-top:.3rem}
-.home-body{padding:1.5rem 1.25rem 5rem}
-.home-section-lbl{font-family:'Righteous',cursive;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:.9rem}
-.section-cards{display:flex;flex-direction:column;gap:.85rem}
-.sc{border-radius:22px;padding:1.4rem 1.5rem;cursor:pointer;transition:transform .2s cubic-bezier(.34,1.56,.64,1),box-shadow .2s;position:relative;overflow:hidden}
-.sc:active{transform:scale(.97)}
-.sc-active{background:linear-gradient(135deg,var(--pink),var(--purple));box-shadow:0 8px 28px rgba(199,125,255,.38)}
-.sc-soon{background:#f3f0f8;cursor:default}
-.sc-row{display:flex;align-items:center;gap:1rem}
-.sc-icon{font-size:2.4rem;flex-shrink:0}
-.sc-info{flex:1}
-.sc-title{font-family:'Righteous',cursive;font-size:1.25rem;letter-spacing:.03em}
-.sc-active .sc-title{color:#fff}
-.sc-soon .sc-title{color:#c0b8d0}
-.sc-desc{font-size:.75rem;font-weight:700;margin-top:.2rem}
-.sc-active .sc-desc{color:rgba(255,255,255,.8)}
-.sc-soon .sc-desc{color:#c0b8d0}
-.sc-pill{display:inline-flex;align-items:center;gap:.3rem;font-size:.62rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:.22rem .65rem;border-radius:100px;margin-top:.55rem}
-.sc-active .sc-pill{background:rgba(255,255,255,.25);color:#fff}
-.sc-soon .sc-pill{background:#e8e0f0;color:#b0a8c0}
-.sc-arr{font-size:1.5rem;font-weight:900;color:rgba(255,255,255,.7);flex-shrink:0}
+.home-hdr{background:linear-gradient(135deg,var(--pink),var(--purple));padding:2.8rem 1.5rem 2.2rem;text-align:center}
+.home-logo-row{display:flex;align-items:center;justify-content:center;gap:.7rem;margin-bottom:.4rem}
+.home-logo{width:46px;height:46px;border-radius:50%;box-shadow:0 4px 14px rgba(0,0,0,.22)}
+.home-title{font-family:'Righteous',cursive;font-size:1.85rem;color:#fff;letter-spacing:.04em;text-shadow:2px 2px 0 rgba(0,0,0,.1)}
+.home-sub{font-size:.72rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.72);margin-top:.25rem}
+.home-body{padding:1.4rem 1.2rem 5rem}
+.home-lbl{font-family:'Righteous',cursive;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:.85rem}
+.home-cards{display:flex;flex-direction:column;gap:.85rem}
 
-/* ── APP ── */
-#app{display:none;min-height:100vh}
-#app.on{display:block}
+/* ── HOME CARDS ── */
+.hcard{border-radius:26px;padding:1.6rem 1.5rem 1.4rem;cursor:pointer;transition:transform .2s cubic-bezier(.34,1.56,.64,1),box-shadow .2s;position:relative;overflow:hidden}
+.hcard:active{transform:scale(.97)}
+.hcard-creami{background:linear-gradient(135deg,var(--pink),var(--purple));box-shadow:0 8px 30px rgba(199,125,255,.4)}
+.hcard-gy{background:linear-gradient(135deg,var(--teal),var(--teal2));box-shadow:0 8px 30px rgba(6,214,160,.35)}
+.hcard-shine{position:absolute;inset:0;background:linear-gradient(145deg,rgba(255,255,255,.18) 0%,rgba(255,255,255,0) 55%);pointer-events:none}
+.hcard-emoji{font-size:3.2rem;display:block;margin-bottom:.75rem;filter:drop-shadow(0 3px 8px rgba(0,0,0,.15))}
+.hcard-title{font-family:'Righteous',cursive;font-size:1.5rem;color:#fff;letter-spacing:.03em;line-height:1.1;text-shadow:1px 2px 0 rgba(0,0,0,.1)}
+.hcard-desc{font-size:.78rem;font-weight:800;color:rgba(255,255,255,.82);margin-top:.35rem}
+.hcard-tags{display:flex;gap:.4rem;flex-wrap:wrap;margin-top:.75rem}
+.hcard-tag{background:rgba(255,255,255,.22);color:#fff;font-size:.62rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:.22rem .65rem;border-radius:100px}
+.hcard-arr{position:absolute;right:1.4rem;bottom:1.4rem;width:36px;height:36px;background:rgba(255,255,255,.22);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.1rem;color:#fff;font-weight:900}
 
-/* ── HEADER ── */
-header{background:linear-gradient(135deg,var(--pink),var(--purple));padding:1rem 1.25rem .6rem;position:sticky;top:0;z-index:100;box-shadow:0 4px 20px rgba(199,125,255,.3)}
-.hdr{display:flex;align-items:center;justify-content:space-between;gap:.5rem}
-.hdr-left{display:flex;align-items:center;gap:.5rem}
-.back-btn{background:rgba(255,255,255,.25);border:none;color:#fff;width:32px;height:32px;border-radius:50%;font-size:1.2rem;cursor:pointer;display:flex;align-items:center;justify-content:center;font-weight:900;flex-shrink:0;transition:background .2s}
+/* ── SHARED SECTION SHELL ── */
+.section{display:none;min-height:100vh}
+.section.on{display:block}
+
+/* ── SECTION HEADER ── */
+.shdr{padding:1rem 1.25rem .6rem;position:sticky;top:0;z-index:100}
+.shdr-creami{background:linear-gradient(135deg,var(--pink),var(--purple));box-shadow:0 4px 20px rgba(199,125,255,.3)}
+.shdr-gy{background:linear-gradient(135deg,var(--teal),var(--teal2));box-shadow:0 4px 20px rgba(8,145,178,.3)}
+.shdr-row{display:flex;align-items:center;justify-content:space-between;gap:.5rem}
+.shdr-left{display:flex;align-items:center;gap:.5rem}
+.back-btn{background:rgba(255,255,255,.25);border:none;color:#fff;width:32px;height:32px;border-radius:50%;font-size:1.2rem;cursor:pointer;display:flex;align-items:center;justify-content:center;font-weight:900;flex-shrink:0;transition:background .15s}
 .back-btn:active{background:rgba(255,255,255,.4)}
-.hdr-title{font-family:'Righteous',cursive;font-size:1.5rem;color:#fff;letter-spacing:.04em;text-shadow:2px 2px 0 rgba(0,0,0,.1);display:flex;align-items:center;gap:.4rem}
-.hdr-title img{width:28px;height:28px;border-radius:50%;box-shadow:0 2px 6px rgba(0,0,0,.2)}
-.hdr-pill{background:rgba(255,255,255,.25);color:#fff;font-size:.68rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:.3rem .75rem;border-radius:100px;white-space:nowrap}
+.shdr-title{font-family:'Righteous',cursive;font-size:1.4rem;color:#fff;letter-spacing:.04em;text-shadow:1px 2px 0 rgba(0,0,0,.1);display:flex;align-items:center;gap:.4rem}
+.shdr-title img{width:26px;height:26px;border-radius:50%;box-shadow:0 2px 6px rgba(0,0,0,.2)}
+.shdr-pill{background:rgba(255,255,255,.25);color:#fff;font-size:.66rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:.28rem .72rem;border-radius:100px;white-space:nowrap}
 .srch-wrap{padding:.65rem 0 0}
-.srch{width:100%;background:#fff;border:none;border-radius:14px;padding:.72rem 1rem .72rem 2.8rem;font-family:'Nunito',sans-serif;font-size:.88rem;font-weight:700;color:var(--text);outline:none;box-shadow:0 4px 16px rgba(0,0,0,.12);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%23ff6b9d' stroke-width='2.5'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cpath d='M21 21l-4.35-4.35'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:.9rem center}
+.srch{width:100%;background:#fff;border:none;border-radius:14px;padding:.72rem 1rem .72rem 2.8rem;font-family:'Nunito',sans-serif;font-size:.88rem;font-weight:700;color:var(--text);outline:none;box-shadow:0 4px 14px rgba(0,0,0,.1);background-repeat:no-repeat;background-position:.9rem center}
+.srch-creami{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%23ff6b9d' stroke-width='2.5'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cpath d='M21 21l-4.35-4.35'/%3E%3C/svg%3E")}
+.srch-gy{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%230891b2' stroke-width='2.5'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cpath d='M21 21l-4.35-4.35'/%3E%3C/svg%3E")}
 .srch::placeholder{color:#ccc;font-weight:700}
 
 /* ── TABS ── */
-.tabs{overflow-x:auto;display:flex;gap:.55rem;padding:.85rem 1.25rem;scrollbar-width:none;background:var(--bg);border-bottom:2.5px solid #ffe8f5}
+.tabs{overflow-x:auto;display:flex;gap:.55rem;padding:.85rem 1.25rem;scrollbar-width:none;background:var(--bg)}
+.tabs-creami{border-bottom:2.5px solid #ffe8f5}
+.tabs-gy{border-bottom:2.5px solid #d1faf2}
 .tabs::-webkit-scrollbar{display:none}
-.tab{flex-shrink:0;padding:.48rem 1.1rem;border-radius:100px;font-size:.78rem;font-weight:800;cursor:pointer;transition:all .2s cubic-bezier(.34,1.56,.64,1);border:2.5px solid #f0d0e0;white-space:nowrap;background:#fff;color:var(--muted);box-shadow:0 2px 8px rgba(0,0,0,.05)}
+.tab{flex-shrink:0;padding:.48rem 1.1rem;border-radius:100px;font-size:.78rem;font-weight:800;cursor:pointer;transition:all .2s cubic-bezier(.34,1.56,.64,1);white-space:nowrap;background:#fff;color:var(--muted);box-shadow:0 2px 8px rgba(0,0,0,.05)}
 .tab:active{transform:scale(.93)}
-.t-all{background:linear-gradient(135deg,var(--pink),var(--purple));color:#fff;border-color:transparent;box-shadow:0 4px 14px rgba(255,107,157,.4)}
-.t-choc{background:linear-gradient(135deg,#6b3a1f,#c0703a);color:#fff;border-color:transparent;box-shadow:0 4px 14px rgba(107,58,31,.35)}
-.t-van{background:linear-gradient(135deg,var(--yellow),var(--orange));color:#fff;border-color:transparent;box-shadow:0 4px 14px rgba(255,217,61,.4)}
-.t-fil{background:linear-gradient(135deg,#7b5ea7,#c77dff);color:#fff;border-color:transparent;box-shadow:0 4px 14px rgba(199,125,255,.4)}
-.t-other{background:linear-gradient(135deg,var(--mint),var(--sky));color:#fff;border-color:transparent;box-shadow:0 4px 14px rgba(107,203,119,.4)}
+/* creami tabs */
+.t-all{background:linear-gradient(135deg,var(--pink),var(--purple));color:#fff;border:none;box-shadow:0 4px 14px rgba(255,107,157,.4)}
+.t-choc{background:linear-gradient(135deg,#6b3a1f,#c0703a);color:#fff;border:none;box-shadow:0 4px 14px rgba(107,58,31,.35)}
+.t-van{background:linear-gradient(135deg,var(--yellow),var(--orange));color:#fff;border:none;box-shadow:0 4px 14px rgba(255,217,61,.4)}
+.t-cake{background:linear-gradient(135deg,var(--pink),var(--coral));color:#fff;border:none;box-shadow:0 4px 14px rgba(255,107,107,.4)}
+.t-other{background:linear-gradient(135deg,var(--mint),var(--sky));color:#fff;border:none;box-shadow:0 4px 14px rgba(107,203,119,.4)}
+/* gy tabs */
+.gy-t-all{background:linear-gradient(135deg,var(--teal),var(--teal2));color:#fff;border:none;box-shadow:0 4px 14px rgba(8,145,178,.4)}
+.gy-t-fruit{background:linear-gradient(135deg,#059669,#34d399);color:#fff;border:none;box-shadow:0 4px 14px rgba(5,150,105,.4)}
+.gy-t-ind{background:linear-gradient(135deg,#0e7490,#0891b2);color:#fff;border:none;box-shadow:0 4px 14px rgba(14,116,144,.4)}
+.tab.inactive{border:2px solid #e8e8e8}
 
 /* ── LIST ── */
 .list{padding:1rem 1.25rem 7.5rem;display:flex;flex-direction:column;gap:.8rem}
 .cat-row{display:flex;align-items:center;gap:.75rem;margin-top:.4rem;margin-bottom:.1rem}
-.cat-tag{font-family:'Righteous',cursive;font-size:.9rem;letter-spacing:.04em;padding:.28rem .9rem;border-radius:100px;color:#fff;white-space:nowrap}
+.cat-tag{font-family:'Righteous',cursive;font-size:.88rem;letter-spacing:.04em;padding:.26rem .85rem;border-radius:100px;color:#fff;white-space:nowrap}
 .ct-choc{background:linear-gradient(135deg,#6b3a1f,#c0703a)}
 .ct-van{background:linear-gradient(135deg,var(--yellow),var(--orange))}
-.ct-fil{background:linear-gradient(135deg,#7b5ea7,#c77dff)}
+.ct-cake{background:linear-gradient(135deg,var(--pink),var(--coral))}
 .ct-other{background:linear-gradient(135deg,var(--mint),var(--sky))}
-.cat-line{flex:1;height:2px;border-radius:2px;background:#e8d0e8;opacity:.5}
+.ct-fruit{background:linear-gradient(135deg,#059669,#34d399)}
+.ct-ind{background:linear-gradient(135deg,#0e7490,#0891b2)}
+.cat-line{flex:1;height:2px;border-radius:2px;background:#e8d0e8;opacity:.4}
+.cat-line-gy{background:#b2ece0}
 
 /* ── CARD ── */
-.card{background:#fff;border-radius:20px;padding:.95rem 1rem;cursor:pointer;transition:transform .2s cubic-bezier(.34,1.56,.64,1),box-shadow .2s;display:flex;align-items:center;gap:.85rem;box-shadow:0 4px 16px rgba(0,0,0,.07);position:relative;overflow:hidden;border:2.5px solid transparent}
-.card:hover{transform:translateY(-3px) scale(1.01);box-shadow:0 12px 30px rgba(0,0,0,.13)}
+.card{background:#fff;border-radius:20px;padding:.95rem 1rem;cursor:pointer;transition:transform .2s cubic-bezier(.34,1.56,.64,1),box-shadow .2s;display:flex;align-items:center;gap:.85rem;box-shadow:0 4px 16px rgba(0,0,0,.07);position:relative;overflow:hidden}
+.card:hover{transform:translateY(-3px) scale(1.01);box-shadow:0 12px 30px rgba(0,0,0,.12)}
 .card:active{transform:scale(.97)}
 .card::after{content:'';position:absolute;right:0;top:0;bottom:0;width:5px;border-radius:0 18px 18px 0}
-.cd-choc::after{background:linear-gradient(135deg,#6b3a1f,#c0703a)}
-.cd-van::after{background:linear-gradient(135deg,var(--yellow),var(--orange))}
-.cd-fil::after{background:linear-gradient(135deg,#7b5ea7,#c77dff)}
-.cd-other::after{background:linear-gradient(135deg,var(--mint),var(--sky))}
+.cd-choc::after{background:linear-gradient(#6b3a1f,#c0703a)}
+.cd-van::after{background:linear-gradient(var(--yellow),var(--orange))}
+.cd-cake::after{background:linear-gradient(var(--pink),var(--coral))}
+.cd-other::after{background:linear-gradient(var(--mint),var(--sky))}
+.cd-fruit::after{background:linear-gradient(#059669,#34d399)}
+.cd-ind::after{background:linear-gradient(#0e7490,#0891b2)}
 .card-icon{width:50px;height:50px;border-radius:13px;display:flex;align-items:center;justify-content:center;font-size:1.7rem;flex-shrink:0}
-.ic-choc{background:#fff3e8}
-.ic-van{background:#fffde8}
-.ic-fil{background:#f5eeff}
-.ic-other{background:#efffee}
+.ic-choc{background:#fff3e8}.ic-van{background:#fffde8}.ic-cake{background:#fff0f5}.ic-other{background:#efffee}
+.ic-fruit{background:#e6fff5}.ic-ind{background:#e0f7fe}
 .card-body{flex:1;min-width:0}
-.card-name{font-weight:900;font-size:.93rem;margin-bottom:.32rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--dark)}
+.card-name{font-weight:900;font-size:.93rem;margin-bottom:.3rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--dark)}
 .pills{display:flex;gap:.3rem;flex-wrap:wrap}
-.pill{font-size:.62rem;font-weight:800;padding:.16rem .48rem;border-radius:100px;white-space:nowrap}
-.p-cal{background:#fff0f5;color:var(--pink)}
-.p-pro{background:#e8f8ff;color:#0099cc}
-.p-carb{background:#fffbe8;color:#bb7700}
-.p-fat{background:#f0ffe8;color:#2d9b2d}
-.card-arr{color:#ddd;font-size:1.3rem;font-weight:900;flex-shrink:0;margin-right:.4rem}
+.pill{font-size:.62rem;font-weight:800;padding:.15rem .46rem;border-radius:100px;white-space:nowrap}
+.p-cal{background:#fff0f5;color:var(--pink)}.p-pro{background:#e8f8ff;color:#0099cc}
+.p-carb{background:#fffbe8;color:#bb7700}.p-fat{background:#f0ffe8;color:#2d9b2d}
+.p-base{background:#e0f7fe;color:#0e7490;font-style:italic}
+.card-arr{color:#ddd;font-size:1.3rem;font-weight:900;flex-shrink:0;margin-right:.3rem}
 
 /* ── EMPTY ── */
 .empty{text-align:center;padding:4rem 2rem;display:none}
 .empty.on{display:block}
 .empty-ico{font-size:3.5rem;display:block;margin-bottom:.75rem}
 .empty-txt{font-weight:700;color:var(--muted);font-size:.95rem}
+
+/* ── BOTTOM BAR ── */
+.bbar{position:fixed;bottom:0;left:0;right:0;padding:.75rem 1.5rem;display:flex;justify-content:space-between;align-items:center;background:#fff;border-top:2.5px solid #ffe8f5;font-size:.65rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;z-index:200}
+.bbar-gy{border-top:2.5px solid #d1faf2}
+.bl-pink{color:var(--pink)}.br-purple{color:var(--purple)}
+.bl-teal{color:var(--teal)}.br-teal2{color:var(--emerald)}
 
 /* ── MODAL ── */
 #modal{position:fixed;inset:0;z-index:500;display:flex;align-items:flex-end;pointer-events:none}
@@ -156,9 +164,9 @@ header{background:linear-gradient(135deg,var(--pink),var(--purple));padding:1rem
 .mhero-bg{position:absolute;inset:0;border-radius:28px 28px 60% 60%/28px 28px 35px 35px;opacity:.1}
 .mbig{font-size:4rem;display:block;position:relative;animation:mfloat 3s ease-in-out infinite;margin-top:.4rem}
 @keyframes mfloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
-.mtitle{font-family:'Righteous',cursive;font-size:1.75rem;letter-spacing:.04em;position:relative;margin-top:.35rem;color:var(--dark)}
+.mtitle{font-family:'Righteous',cursive;font-size:1.7rem;letter-spacing:.04em;position:relative;margin-top:.3rem;color:var(--dark)}
 .mbadge{display:inline-block;font-size:.65rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding:.25rem .8rem;border-radius:100px;color:#fff;margin-top:.35rem;position:relative}
-.xcls{position:absolute;top:.9rem;right:1.2rem;width:34px;height:34px;border-radius:50%;background:#f5f5f5;border:none;cursor:pointer;font-size:1rem;color:var(--muted);display:flex;align-items:center;justify-content:center;z-index:10;transition:background .2s}
+.xcls{position:absolute;top:.9rem;right:1.2rem;width:34px;height:34px;border-radius:50%;background:#f5f5f5;border:none;cursor:pointer;font-size:1rem;color:var(--muted);display:flex;align-items:center;justify-content:center;z-index:10;transition:background .15s}
 .xcls:hover{background:#eee}
 .mgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:.6rem;padding:0 1.25rem 1.2rem}
 .mc{border-radius:14px;padding:.7rem .4rem;text-align:center}
@@ -172,6 +180,9 @@ header{background:linear-gradient(135deg,var(--pink),var(--purple));padding:1rem
 .ing-row{display:flex;align-items:flex-start;gap:.7rem;font-size:.87rem;font-weight:600;line-height:1.45;padding:.5rem 0;border-bottom:1.5px solid #f8f8f8;color:var(--text)}
 .ing-row:last-child{border-bottom:none}
 .ing-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;margin-top:.44rem}
+.gy-base-box{background:#e8fdf7;border:2px solid #06d6a020;border-radius:16px;padding:.9rem 1rem;margin-bottom:.8rem}
+.gy-base-lbl{font-size:.65rem;font-weight:800;letter-spacing:.15em;text-transform:uppercase;color:var(--teal);margin-bottom:.5rem}
+.gy-base-note{font-size:.78rem;font-weight:700;color:#0e7490;line-height:1.55}
 .steps{display:flex;flex-direction:column;gap:.65rem}
 .step{display:flex;align-items:flex-start;gap:.75rem;font-size:.87rem;font-weight:600;line-height:1.5;color:#444}
 .snum{width:26px;height:26px;border-radius:50%;color:#fff;font-family:'Righteous',cursive;font-size:.75rem;display:flex;align-items:center;justify-content:center;flex-shrink:0}
@@ -179,15 +190,11 @@ header{background:linear-gradient(135deg,var(--pink),var(--purple));padding:1rem
 .mixin-lbl{font-size:.68rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;margin-bottom:.4rem}
 .mixin-txt{font-size:.87rem;font-weight:600;line-height:1.5}
 .note-box{background:#fffde8;border:2px solid #ffd93d;border-radius:14px;padding:.85rem 1rem;margin-top:.75rem;font-size:.82rem;font-weight:600;line-height:1.5;color:#6b5500}
-
-/* ── BOTTOM BAR ── */
-.bbar{position:fixed;bottom:0;left:0;right:0;padding:.75rem 1.5rem;display:flex;justify-content:space-between;align-items:center;background:#fff;border-top:2.5px solid #ffe8f5;font-size:.65rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;z-index:200}
-.bl{color:var(--pink)}.br{color:var(--purple)}
 </style>
 </head>
 <body>
 
-<!-- COVER -->
+<!-- ═══ COVER ═══ -->
 <div id="cover" onclick="launch()">
   <div class="cvr-bg"></div>
   <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div><div class="blob b4"></div>
@@ -203,179 +210,208 @@ header{background:linear-gradient(135deg,var(--pink),var(--purple));padding:1rem
     <span class="cvr-cone">🍦</span>
     <span class="cvr-title">CREAMI<br>CRAVINGS</span>
     <div class="cvr-badges">
-      <span class="cvr-badge">🥛 DariGold Whole Milk</span>
-      <span class="cvr-badge">✂️ No Protein Powder</span>
-      <span class="cvr-badge">📖 17 Recipes</span>
+      <span class="cvr-badge">🍦 28 Ninja Creami</span>
+      <span class="cvr-badge">🫙 10 Greek Yogurt</span>
+      <span class="cvr-badge">🥛 DariGold Base</span>
     </div>
     <div class="cvr-btn">Let's get scooping! 🍨</div>
   </div>
 </div>
 
-<!-- HOME SCREEN -->
+<!-- ═══ HOME SCREEN ═══ -->
 <div id="home">
   <div class="home-hdr">
-    <div class="home-logo-wrap">
-      <img src="logo.svg" class="home-logo" alt="Creami Cravings">
+    <div class="home-logo-row">
+      <img src="logo.svg" class="home-logo" alt="">
       <span class="home-title">Creami Cravings</span>
     </div>
-    <div class="home-sub">Choose your recipe book</div>
+    <div class="home-sub">Pick your recipe collection</div>
   </div>
   <div class="home-body">
-    <div class="home-section-lbl">Recipe Collections</div>
-    <div class="section-cards">
+    <div class="home-lbl">Recipe Collections</div>
+    <div class="home-cards">
 
-      <div class="sc sc-active" onclick="enterSection()">
-        <div class="sc-row">
-          <span class="sc-icon">🥛</span>
-          <div class="sc-info">
-            <div class="sc-title">No Protein Powder</div>
-            <div class="sc-desc">DariGold Whole Milk · Classic Creami</div>
-            <div class="sc-pill">17 Recipes · Active</div>
-          </div>
-          <span class="sc-arr">›</span>
+      <div class="hcard hcard-creami" onclick="openSection('creami')">
+        <div class="hcard-shine"></div>
+        <span class="hcard-emoji">🍦</span>
+        <div class="hcard-title">No Protein Powder<br>Ninja Creami</div>
+        <div class="hcard-desc">28 recipes · No protein powder needed</div>
+        <div class="hcard-tags">
+          <span class="hcard-tag">🍫 Chocolate</span>
+          <span class="hcard-tag">🍦 Vanilla</span>
+          <span class="hcard-tag">🎂 Cake Batter</span>
+          <span class="hcard-tag">✨ Other</span>
         </div>
+        <div class="hcard-arr">›</div>
       </div>
 
-      <div class="sc sc-soon">
-        <div class="sc-row">
-          <span class="sc-icon">🫙</span>
-          <div class="sc-info">
-            <div class="sc-title">Greek Yogurt</div>
-            <div class="sc-desc">High protein · Thick &amp; creamy bases</div>
-            <div class="sc-pill">Coming Soon</div>
-          </div>
+      <div class="hcard hcard-gy" onclick="openSection('gy')">
+        <div class="hcard-shine"></div>
+        <span class="hcard-emoji">🫙</span>
+        <div class="hcard-title">High Protein<br>Greek Yogurt Fro-Yo</div>
+        <div class="hcard-desc">10 recipes · High protein fro-yo</div>
+        <div class="hcard-tags">
+          <span class="hcard-tag">🍓 Fruity</span>
+          <span class="hcard-tag">🍫 Indulgent</span>
         </div>
+        <div class="hcard-arr">›</div>
       </div>
 
     </div>
   </div>
 </div>
 
-<!-- APP -->
-<div id="app">
-  <header>
-    <div class="hdr">
-      <div class="hdr-left">
+<!-- ═══ CREAMI SECTION ═══ -->
+<div id="creami" class="section">
+  <header class="shdr shdr-creami">
+    <div class="shdr-row">
+      <div class="shdr-left">
         <button class="back-btn" onclick="goHome()">‹</button>
-        <div class="hdr-title"><img src="logo.svg" alt=""> Creami Cravings</div>
+        <div class="shdr-title"><img src="logo.svg" alt=""> Ninja Creami</div>
       </div>
-      <div class="hdr-pill" id="cnt">17 recipes</div>
+      <div class="shdr-pill" id="creami-cnt">28 recipes</div>
     </div>
     <div class="srch-wrap">
-      <input class="srch" type="text" placeholder="Search flavors or ingredients…" id="srch" oninput="doFilter()">
+      <input class="srch srch-creami" type="text" placeholder="Search flavors or ingredients…" id="creami-srch" oninput="doFilter('creami')">
     </div>
   </header>
-  <div class="tabs" id="tabs"></div>
-  <div class="list" id="list"></div>
-  <div class="empty" id="empty"><span class="empty-ico">🤷‍♀️</span><div class="empty-txt">No recipes match — try another search!</div></div>
-  <div class="bbar"><div class="bl">🥛 DariGold Whole Milk</div><div class="br">Full pint macros ✓</div></div>
+  <div class="tabs tabs-creami" id="creami-tabs"></div>
+  <div class="list" id="creami-list"></div>
+  <div class="empty" id="creami-empty"><span class="empty-ico">🤷‍♀️</span><div class="empty-txt">No recipes match — try another search!</div></div>
+  <div class="bbar"><div class="bl-pink">🥛 DariGold Whole Milk</div><div class="br-purple">Full pint macros ✓</div></div>
 </div>
 
+<!-- ═══ GREEK YOGURT SECTION ═══ -->
+<div id="froyo" class="section">
+  <header class="shdr shdr-gy">
+    <div class="shdr-row">
+      <div class="shdr-left">
+        <button class="back-btn" onclick="goHome()">‹</button>
+        <div class="shdr-title"><img src="logo.svg" alt=""> Greek Yogurt Fro-Yo</div>
+      </div>
+      <div class="shdr-pill" id="gy-cnt">10 recipes</div>
+    </div>
+    <div class="srch-wrap">
+      <input class="srch srch-gy" type="text" placeholder="Search flavors…" id="gy-srch" oninput="doFilter('gy')">
+    </div>
+  </header>
+  <div class="tabs tabs-gy" id="gy-tabs"></div>
+  <div class="list" id="gy-list"></div>
+  <div class="empty" id="gy-empty"><span class="empty-ico">🤷‍♀️</span><div class="empty-txt">No recipes match!</div></div>
+  <div class="bbar bbar-gy"><div class="bl-teal">🫙 Greek Yogurt + DariGold</div><div class="br-teal2">Full pint macros ✓</div></div>
+</div>
+
+<!-- ═══ SHARED MODAL ═══ -->
 <div id="modal">
   <div class="mbk" onclick="close_()"></div>
   <div class="msheet" id="msheet"><div id="mbody"></div></div>
 </div>
 
 <script>
+// ─────────────────────────────────────────
+// CREAMI DATA
+// ─────────────────────────────────────────
 const S = {
-  Chocolate: {tab:'t-choc', cat:'ct-choc', card:'cd-choc', ic:'ic-choc', dot:'#c0703a', badge:'linear-gradient(135deg,#6b3a1f,#c0703a)', mixin:'#fff3e8', mixinL:'#7a3a10', heroBg:'linear-gradient(135deg,#6b3a1f,#c0703a)'},
-  Vanilla:   {tab:'t-van',  cat:'ct-van',  card:'cd-van',  ic:'ic-van',  dot:'#ff9a3c', badge:'linear-gradient(135deg,#ffd93d,#ff9a3c)', mixin:'#fffde8', mixinL:'#996600', heroBg:'linear-gradient(135deg,#ffd93d,#ff9a3c)'},
-  Filipino:  {tab:'t-fil',  cat:'ct-fil',  card:'cd-fil',  ic:'ic-fil',  dot:'#c77dff', badge:'linear-gradient(135deg,#7b5ea7,#c77dff)', mixin:'#f5eeff', mixinL:'#7744bb', heroBg:'linear-gradient(135deg,#7b5ea7,#c77dff)'},
-  Other:     {tab:'t-other',cat:'ct-other', card:'cd-other',ic:'ic-other',dot:'#6bcb77', badge:'linear-gradient(135deg,#6bcb77,#4fc3f7)', mixin:'#efffee', mixinL:'#2d9b2d', heroBg:'linear-gradient(135deg,#6bcb77,#4fc3f7)'},
+  Chocolate:    {tab:'t-choc',  cat:'ct-choc',  card:'cd-choc',  ic:'ic-choc',  dot:'#c0703a', badge:'linear-gradient(135deg,#6b3a1f,#c0703a)',  mixin:'#fff3e8', mixinL:'#7a3a10', heroBg:'linear-gradient(135deg,#6b3a1f,#c0703a)'},
+  Vanilla:      {tab:'t-van',   cat:'ct-van',   card:'cd-van',   ic:'ic-van',   dot:'#ff9a3c', badge:'linear-gradient(135deg,#ffd93d,#ff9a3c)',  mixin:'#fffde8', mixinL:'#996600', heroBg:'linear-gradient(135deg,#ffd93d,#ff9a3c)'},
+  'Cake Batter':{tab:'t-cake',  cat:'ct-cake',  card:'cd-cake',  ic:'ic-cake',  dot:'#ff6b9d', badge:'linear-gradient(135deg,#ff6b9d,#ff6b6b)',  mixin:'#fff0f5', mixinL:'#cc1155', heroBg:'linear-gradient(135deg,#ff6b9d,#ff6b6b)'},
+  Other:        {tab:'t-other', cat:'ct-other', card:'cd-other', ic:'ic-other', dot:'#6bcb77', badge:'linear-gradient(135deg,#6bcb77,#4fc3f7)',  mixin:'#efffee', mixinL:'#2d9b2d', heroBg:'linear-gradient(135deg,#6bcb77,#4fc3f7)'},
 };
-const CE = {Chocolate:'🍫', Vanilla:'🍦', Filipino:'🇵🇭', Other:'✨'};
-const CATS = ['All','Chocolate','Vanilla','Filipino','Other'];
+const CE = {Chocolate:'🍫', Vanilla:'🍦', 'Cake Batter':'🎂', Other:'✨'};
+const CATS = ['All','Chocolate','Vanilla','Cake Batter','Other'];
 
-// All macros calculated from DariGold Whole Milk (414ml = 270 cal, 14g fat, 22g carb, 15g protein)
 const R = [
-  // ── CHOCOLATE ──
-  {id:1, e:'🍫', n:'Classic Chocolate', c:'Chocolate', cal:320, p:19, ch:30, f:16,
+  // ── CHOCOLATE (6) ──
+  {id:1,  e:'🍫', n:'Classic Chocolate',      c:'Chocolate',    cal:320, p:19, ch:30, f:16,
    i:['414ml DariGold Whole Milk (1 bottle)','2 tbsp (14g) black cocoa powder','25g monk fruit sweetener','Pinch of salt','1g (¼ tsp) xanthan gum'],
-   m:null,
-   nt:'Black cocoa gives a deep, fudgy flavour — use it over regular cocoa for best results. Blend everything before pouring into the pint.'},
-
-  {id:2, e:'🌶️', n:'Mexican Chocolate', c:'Chocolate', cal:320, p:19, ch:30, f:16,
+   m:null, nt:'Black cocoa gives a deeper, fudgier flavour than regular cocoa. Blend everything smooth before pouring into the pint.'},
+  {id:2,  e:'🌶️', n:'Mexican Chocolate',      c:'Chocolate',    cal:320, p:19, ch:30, f:16,
    i:['414ml DariGold Whole Milk (1 bottle)','2 tbsp (14g) cocoa powder','¼ tsp cinnamon','2–3 pinches cayenne pepper','25g monk fruit sweetener','Pinch of salt','1g (¼ tsp) xanthan gum'],
-   m:null,
-   nt:'Start with 2 pinches of cayenne — it gets spicy FAST. Taste before freezing and add more if you want heat.'},
-
-  {id:3, e:'🥜', n:'Chocolate Peanut Butter', c:'Chocolate', cal:390, p:21, ch:30, f:23,
+   m:null, nt:'Start with 2 pinches of cayenne — taste before freezing and add more if you want heat. It gets spicy FAST.'},
+  {id:3,  e:'🥜', n:'Chocolate Peanut Butter', c:'Chocolate',    cal:390, p:21, ch:30, f:23,
    i:['414ml DariGold Whole Milk (1 bottle)','1 tbsp (7g) cocoa powder','1 tbsp (16g) natural peanut butter','20g monk fruit sweetener','Pinch of salt','1g (¼ tsp) xanthan gum'],
-   m:'Extra drizzle of peanut butter on top after spinning',
-   nt:'Blend everything together — the PB emulsifies into the milk and creates a super creamy base. No chunky bits, just smooth chocolate peanut butter flavour throughout.'},
-
-  {id:4, e:'🌿', n:'Mint Chocolate', c:'Chocolate', cal:320, p:19, ch:30, f:16,
+   m:'Extra peanut butter drizzle on top after spinning', nt:'Blend everything together — the PB emulsifies into the milk for a smooth, luscious base.'},
+  {id:4,  e:'🌿', n:'Mint Chocolate',          c:'Chocolate',    cal:320, p:19, ch:30, f:16,
    i:['414ml DariGold Whole Milk (1 bottle)','2 tbsp (14g) black cocoa powder','⅛ tsp peppermint extract','25g monk fruit sweetener','Pinch of salt','1g (¼ tsp) xanthan gum'],
-   m:'10g mini chocolate chips stirred in by hand after spinning',
-   nt:'⅛ tsp peppermint is plenty — a little goes a long way. Taste the mix before freezing.'},
+   m:'10g mini chocolate chips stirred in by hand after spinning', nt:'⅛ tsp peppermint is the sweet spot — a little goes a long way. Taste before freezing!'},
+  {id:5,  e:'🏔️', n:'Rocky Road',              c:'Chocolate',    cal:320, p:19, ch:30, f:16,
+   i:['414ml DariGold Whole Milk (1 bottle)','2 tbsp (14g) cocoa powder','25g monk fruit sweetener','Pinch of salt','1g (¼ tsp) xanthan gum'],
+   m:'10g mini marshmallows + 10g chopped walnuts or almonds — add via Mix-In setting', nt:'Macros shown are for the base only. Mix-ins add ~90 cal, 5g fat, 10g carbs.'},
+  {id:6,  e:'☕', n:'Mocha',                   c:'Chocolate',    cal:325, p:19, ch:30, f:16,
+   i:['414ml DariGold Whole Milk (1 bottle)','2 tbsp (14g) cocoa powder','1 tsp instant espresso powder','25g monk fruit sweetener','Pinch of salt','1g (¼ tsp) xanthan gum'],
+   m:null, nt:'Dissolve the espresso in a small splash of warm milk before adding everything else.'},
 
-  // ── VANILLA ──
-  {id:5, e:'🍦', n:'Classic Vanilla', c:'Vanilla', cal:275, p:15, ch:22, f:14,
+  // ── VANILLA (8) ──
+  {id:7,  e:'🍦', n:'Classic Vanilla',         c:'Vanilla',      cal:275, p:15, ch:22, f:14,
    i:['414ml DariGold Whole Milk (1 bottle)','1 tsp vanilla bean paste','25g monk fruit sweetener','Pinch of salt','1g (¼ tsp) xanthan gum'],
-   m:null,
-   nt:'Use vanilla bean PASTE not extract — the little black specks and deeper flavour are worth it. This is your master base for almost any vanilla variation.'},
-
-  {id:6, e:'🍓', n:'Strawberry', c:'Vanilla', cal:305, p:16, ch:30, f:14,
+   m:null, nt:'Use vanilla bean PASTE not extract — the specks and deeper flavour are worth it. This is your master base for almost any vanilla variation.'},
+  {id:8,  e:'🍓', n:'Strawberry',              c:'Vanilla',      cal:305, p:16, ch:30, f:14,
    i:['414ml DariGold Whole Milk (1 bottle)','10g freeze-dried strawberries (blended to powder)','1 tsp vanilla bean paste','20g monk fruit sweetener','Pinch of salt','1g (¼ tsp) xanthan gum'],
-   m:'Extra freeze-dried strawberry crumbles on top after spinning',
-   nt:'Blend the freeze-dried strawberries into a powder first for the smoothest colour and flavour. Fresh or frozen strawberries add too much water and ruin the texture.'},
-
-  {id:7, e:'🍪', n:'Cookies & Cream', c:'Vanilla', cal:375, p:17, ch:36, f:18,
+   m:'Extra freeze-dried strawberry crumbles on top', nt:'Blend freeze-dried strawberries into a fine powder first — fresh or frozen add too much water and ruin the texture.'},
+  {id:9,  e:'🍪', n:'Cookies & Cream',         c:'Vanilla',      cal:375, p:17, ch:36, f:18,
    i:['414ml DariGold Whole Milk (1 bottle)','1 tsp vanilla bean paste','25g monk fruit sweetener','Pinch of salt','1g (¼ tsp) xanthan gum'],
-   m:'3 Oreo Thins (cream removed) — crush and add via Mix-In setting',
-   nt:'Remove the Oreo cream to keep the texture right — the cream melts into the ice cream and makes it oily. Just the wafer!'},
-
-  {id:8, e:'☕', n:'Coffee Crème', c:'Vanilla', cal:280, p:15, ch:23, f:14,
-   i:['414ml DariGold Whole Milk (1 bottle)','1 tsp instant espresso powder (or 1 shot cooled espresso)','1 tsp vanilla bean paste','25g monk fruit sweetener','Pinch of salt','1g (¼ tsp) xanthan gum'],
-   m:null,
-   nt:'Dissolve the espresso powder in a splash of warm milk before mixing everything together. Cool completely before pouring into the pint — hot liquid ruins the freeze.'},
-
-  {id:9, e:'🍌', n:'Banana Foster', c:'Vanilla', cal:286, p:12, ch:39, f:10,
+   m:'3 Oreo Thins (cream removed) — crush, add via Mix-In setting', nt:'Remove the Oreo cream — it melts into the base and makes it oily. Just the wafer!'},
+  {id:10, e:'☕', n:'Coffee Crème',             c:'Vanilla',      cal:280, p:15, ch:23, f:14,
+   i:['414ml DariGold Whole Milk (1 bottle)','1 tsp instant espresso powder (or 1 cooled espresso shot)','1 tsp vanilla bean paste','25g monk fruit sweetener','Pinch of salt','1g (¼ tsp) xanthan gum'],
+   m:null, nt:'Dissolve espresso in a splash of warm milk first. Make sure the mixture is completely cool before freezing.'},
+  {id:11, e:'🍌', n:'Banana Foster',            c:'Vanilla',      cal:286, p:12, ch:39, f:10,
    i:['300ml DariGold Whole Milk','1 medium ripe banana (100g) — the riper the better','½ tsp vanilla bean paste','15g monk fruit sweetener','Pinch of salt','1g (¼ tsp) xanthan gum'],
-   m:'Caramel drizzle + pinch of cinnamon on top after spinning',
-   nt:'Use a very ripe banana with lots of brown spots — it blends smoother and tastes way sweeter. Blend everything together until completely smooth before freezing.'},
+   m:'Caramel drizzle + pinch of cinnamon on top', nt:'Use a very ripe banana with brown spots — sweeter and blends silkier. Blend completely smooth before freezing.'},
+  {id:12, e:'🍫', n:'Vanilla Choc Chip',        c:'Vanilla',      cal:358, p:16, ch:31, f:19,
+   i:['414ml DariGold Whole Milk (1 bottle)','1 tsp vanilla bean paste','25g monk fruit sweetener','Pinch of salt','1g (¼ tsp) xanthan gum'],
+   m:'15g dark chocolate chips + 1 tsp coconut oil — melt together, pour into hole before Mix-In cycle', nt:'Melting choc with coconut oil makes it re-solidify into perfect creamy chips, not icy shards.'},
+  {id:13, e:'🍰', n:'Strawberry Cheesecake',    c:'Vanilla',      cal:350, p:17, ch:23, f:22,
+   i:['414ml DariGold Whole Milk (1 bottle)','22g cream cheese (room temp)','1 tsp vanilla bean paste','25g monk fruit sweetener','Pinch of salt','1g (¼ tsp) xanthan gum'],
+   m:'Fresh strawberry topping: mash 60g strawberries + 5g sweetener, refrigerate 30 min', nt:'Blend the cream cheese with a splash of milk first until fully smooth — lumps freeze into icy chunks.'},
+  {id:14, e:'🥜', n:'PB Vanilla Cup',           c:'Vanilla',      cal:365, p:17, ch:32, f:19,
+   i:['414ml DariGold Whole Milk (1 bottle)','1 tsp vanilla bean paste','25g monk fruit sweetener','Pinch of salt','1g (¼ tsp) xanthan gum'],
+   m:'1 mini Reese\'s PB cup chopped + FROZEN for 2hrs, added via Mix-In — or 10g dark choc chips + 1 tbsp PB', nt:'Freezing the PB cup first is critical — the Mix-In setting will pulverize room-temp fillings completely.'},
 
-  // ── FILIPINO ──
-  {id:10, e:'🟣', n:'Ube', c:'Filipino', cal:275, p:15, ch:22, f:14,
-   i:['414ml DariGold Whole Milk (1 bottle)','1 tsp ube extract (or 1 tbsp ube halaya jam)','½ tsp vanilla bean paste','20g monk fruit sweetener','1–2 drops purple food colouring (optional)','1g (¼ tsp) xanthan gum'],
-   m:'Swirl of ube halaya jam on top after spinning',
-   nt:'Ube extract gives the colour and flavour without extra calories. If using ube halaya, add it to the blend — macros will be slightly higher (~+50 cal, +10g carb from the jam).'},
+  // ── CAKE BATTER (5) ──
+  {id:15, e:'🎂', n:'Cake Batter',             c:'Cake Batter',  cal:275, p:15, ch:22, f:14,
+   i:['414ml DariGold Whole Milk (1 bottle)','1 tsp cake batter extract','25g monk fruit sweetener','Pinch of salt','1g (¼ tsp) xanthan gum'],
+   m:null, nt:'Find cake batter extract near vanilla extract at any baking store. LorAnn brand is excellent.'},
+  {id:16, e:'🎉', n:'Birthday Cake',           c:'Cake Batter',  cal:295, p:15, ch:27, f:14,
+   i:['414ml DariGold Whole Milk (1 bottle)','1 tsp cake batter extract','½ tsp vanilla bean paste','25g monk fruit sweetener','Pinch of salt','1g (¼ tsp) xanthan gum'],
+   m:'5g rainbow sprinkles — fold in BY HAND after spinning, not via Mix-In', nt:'Stir sprinkles in gently by hand — the Mix-In setting turns them to mush. Fold, don\'t blend!'},
+  {id:17, e:'🌈', n:'Funfetti',                c:'Cake Batter',  cal:295, p:15, ch:27, f:14,
+   i:['414ml DariGold Whole Milk (1 bottle)','1 tsp cake batter extract','½ tsp vanilla bean paste','1–2 drops pink + 1 drop blue food colouring (optional, for pastel swirl)','25g monk fruit sweetener','Pinch of salt','1g (¼ tsp) xanthan gum'],
+   m:'5g rainbow sprinkles throughout — fold in by hand after spinning', nt:'Swirl the food colouring in GENTLY with a toothpick just before freezing — don\'t fully mix it or you lose the swirl effect.'},
+  {id:18, e:'❤️', n:'Red Velvet',              c:'Cake Batter',  cal:295, p:17, ch:26, f:15,
+   i:['414ml DariGold Whole Milk (1 bottle)','1 tsp cake batter extract','1 tsp cocoa powder (just a hint)','4–5 drops red food colouring','25g monk fruit sweetener','Pinch of salt','1g (¼ tsp) xanthan gum'],
+   m:'Cream cheese drizzle: 20g cream cheese + 10g sweetener + splash of milk — whisk smooth', nt:'Go heavy on the red colouring — it fades when frozen. The mix should look deep red in the pint.'},
+  {id:19, e:'🍮', n:'Salted Caramel Cake',     c:'Cake Batter',  cal:275, p:15, ch:22, f:14,
+   i:['414ml DariGold Whole Milk (1 bottle)','1 tsp caramel extract','½ tsp cake batter extract','Extra pinch of salt (generous!)','20g monk fruit sweetener','1g (¼ tsp) xanthan gum'],
+   m:'Caramel syrup drizzled into hole before spinning', nt:'The double extract combo — caramel + cake batter — gives it that bakery-fresh, buttery sweetness. Don\'t skip the extra salt.'},
 
-  {id:11, e:'🌿', n:'Pandan Coconut', c:'Filipino', cal:275, p:15, ch:22, f:14,
-   i:['414ml DariGold Whole Milk (1 bottle)','½ tsp pandan extract','1 tsp coconut extract','20g monk fruit sweetener','Pinch of salt','1g (¼ tsp) xanthan gum'],
-   m:'Toasted desiccated coconut sprinkled on top after spinning',
-   nt:'Pandan extract varies wildly in intensity — start with ¼ tsp, taste, and add more before freezing. It should smell like fresh pandan leaves, not artificial candy.'},
-
-  {id:12, e:'🥭', n:'Carabao Mango', c:'Filipino', cal:276, p:11, ch:37, f:10,
-   i:['280ml DariGold Whole Milk','150g overripe carabao mango flesh (~1 medium mango)','15g monk fruit sweetener','Juice of ½ calamansi','1g (¼ tsp) xanthan gum'],
-   m:'Fresh mango chunks on top after spinning',
-   nt:'Use very overripe mango — the sweeter and softer the better. Carabao mango is super sweet when fully ripe so taste before adding more sweetener. Blend completely smooth before freezing.'},
-
-  {id:13, e:'🍮', n:'Leche Flan', c:'Filipino', cal:335, p:16, ch:34, f:15,
-   i:['390ml DariGold Whole Milk','25g sweetened condensed milk','1 tsp vanilla bean paste','Pinch of salt','1g (¼ tsp) xanthan gum'],
-   m:'Caramel syrup drizzled into the hole before spinning',
-   nt:'The condensed milk is what gives it that signature eggy-sweet leche flan flavour. Pour the caramel INTO the hole before you spin — it creates beautiful ribbons through the whole pint.'},
-
-  // ── OTHER ──
-  {id:14, e:'🍵', n:'Matcha', c:'Other', cal:295, p:17, ch:25, f:14,
-   i:['414ml DariGold Whole Milk (1 bottle)','1 tbsp (8g) ceremonial or culinary grade matcha powder','25g monk fruit sweetener','Pinch of salt','1g (¼ tsp) xanthan gum'],
-   m:'Matcha powder dusted on top + a drizzle of honey',
-   nt:'Whisk the matcha with a tiny bit of warm milk first to dissolve it before adding everything else — this prevents clumps and gives a smoother colour. Ceremonial grade tastes better but culinary works fine.'},
-
-  {id:15, e:'🍯', n:'Honey Vanilla', c:'Other', cal:340, p:15, ch:39, f:14,
+  // ── OTHER (9) ──
+  {id:20, e:'🍵', n:'Matcha',                  c:'Other',        cal:295, p:17, ch:25, f:14,
+   i:['414ml DariGold Whole Milk (1 bottle)','1 tbsp (8g) culinary grade matcha powder','25g monk fruit sweetener','Pinch of salt','1g (¼ tsp) xanthan gum'],
+   m:'Matcha powder dusted on top + honey drizzle', nt:'Whisk matcha into a small splash of warm milk first to avoid clumps, then add everything else.'},
+  {id:21, e:'🍯', n:'Honey Vanilla',           c:'Other',        cal:340, p:15, ch:39, f:14,
    i:['414ml DariGold Whole Milk (1 bottle)','1 tbsp (21g) raw honey','1 tsp vanilla bean paste','Pinch of salt','1g (¼ tsp) xanthan gum'],
-   m:null,
-   nt:'Skip the monk fruit — the honey is your only sweetener here so its flavour really comes through. Use raw honey for the most complex taste. Warm it slightly if it\'s thick so it blends smoothly.'},
-
-  {id:16, e:'🥜', n:'Peanut Butter', c:'Other', cal:415, p:21, ch:27, f:26,
+   m:null, nt:'No extra sweetener — honey is the only sweetener here so its flavour shines. Use raw honey for depth. Warm it slightly if thick so it blends smooth.'},
+  {id:22, e:'🥜', n:'Peanut Butter',           c:'Other',        cal:415, p:21, ch:27, f:26,
    i:['414ml DariGold Whole Milk (1 bottle)','1.5 tbsp (24g) natural peanut butter','20g monk fruit sweetener','Pinch of flaky salt','1g (¼ tsp) xanthan gum'],
-   m:'Peanut butter drizzle + crushed peanuts on top after spinning',
-   nt:'The fat from whole milk + PB makes this the richest, creamiest base in the collection — it spins incredibly smooth. Use natural PB (just peanuts + salt) not the sugary commercial kind.'},
-
-  {id:17, e:'🍋', n:'Calamansi Citrus', c:'Other', cal:266, p:14, ch:25, f:13,
+   m:'PB drizzle + crushed peanuts on top', nt:'Whole milk + PB = the creamiest, richest base in the collection. Use natural PB (just peanuts + salt) not the sugary commercial kind.'},
+  {id:23, e:'🍋', n:'Calamansi Citrus',        c:'Other',        cal:266, p:14, ch:25, f:13,
    i:['380ml DariGold Whole Milk','Juice of 6–8 fresh calamansi (~50ml)','25g monk fruit sweetener','Pinch of salt','1g (¼ tsp) xanthan gum'],
-   m:null,
-   nt:'Calamansi is more tart than lime so taste the mix and add more sweetener if needed. Squeeze fresh — bottled calamansi juice doesn\'t hit the same. The acidity means this mix looks slightly thinner than others before freezing — that\'s normal.'},
+   m:null, nt:'Calamansi is more tart than lime — taste and adjust sweetener before freezing. Squeeze fresh only.'},
+  {id:24, e:'🟣', n:'Ube',                     c:'Other',        cal:275, p:15, ch:22, f:14,
+   i:['414ml DariGold Whole Milk (1 bottle)','1 tsp ube extract','½ tsp vanilla bean paste','20g monk fruit sweetener','1–2 drops purple food colouring (optional)','1g (¼ tsp) xanthan gum'],
+   m:'Swirl of ube halaya jam on top after spinning', nt:'Ube extract gives the colour and flavour without extra bulk. If you can find ube halaya jam, swirl it on top after spinning for extra authenticity.'},
+  {id:25, e:'🌿', n:'Pandan Coconut',          c:'Other',        cal:275, p:15, ch:22, f:14,
+   i:['414ml DariGold Whole Milk (1 bottle)','½ tsp pandan extract','1 tsp coconut extract','20g monk fruit sweetener','Pinch of salt','1g (¼ tsp) xanthan gum'],
+   m:'Toasted desiccated coconut sprinkled on top', nt:'Pandan extract varies wildly in strength — start with ¼ tsp, taste, then add more. It should smell like fresh pandan leaves.'},
+  {id:26, e:'🥭', n:'Carabao Mango',           c:'Other',        cal:276, p:11, ch:37, f:10,
+   i:['280ml DariGold Whole Milk','150g overripe carabao mango flesh (~1 medium mango)','15g monk fruit sweetener','Juice of ½ calamansi','1g (¼ tsp) xanthan gum'],
+   m:'Fresh mango chunks on top after spinning', nt:'Use very overripe carabao mango — sweeter, softer, and blends smoother. Taste before adding sweetener — ripe carabao is already very sweet.'},
+  {id:27, e:'🍮', n:'Leche Flan',              c:'Other',        cal:335, p:16, ch:34, f:15,
+   i:['390ml DariGold Whole Milk','25g sweetened condensed milk','1 tsp vanilla bean paste','Pinch of salt','1g (¼ tsp) xanthan gum'],
+   m:'Caramel syrup drizzled into the hole before spinning', nt:'The condensed milk gives it the signature sweet eggy flavour of leche flan. Pour caramel INTO the hole before spinning for ribbons throughout.'},
+  {id:28, e:'🌀', n:'Cinnamon',                c:'Other',        cal:275, p:15, ch:22, f:14,
+   i:['414ml DariGold Whole Milk (1 bottle)','1 tsp cinnamon','½ tsp vanilla bean paste','25g monk fruit sweetener','Pinch of salt','1g (¼ tsp) xanthan gum'],
+   m:'Honey drizzle + extra cinnamon dusted on top', nt:'Simple and deeply satisfying. Use good cinnamon — Ceylon is sweeter and more complex than cassia.'},
 ];
 
 const STEPS = [
@@ -387,95 +423,225 @@ const STEPS = [
   "Add mix-ins using the 'Mix-In' setting (if applicable).",
 ];
 
-let actCat = 'All', srchVal = '';
+// ─────────────────────────────────────────
+// GREEK YOGURT DATA
+// ─────────────────────────────────────────
+const GY_S = {
+  Fruity:    {tab:'gy-t-fruit', cat:'ct-fruit', card:'cd-fruit', ic:'ic-fruit', dot:'#059669', badge:'linear-gradient(135deg,#059669,#34d399)', mixin:'#ecfdf5', mixinL:'#065f46', heroBg:'linear-gradient(135deg,#059669,#34d399)'},
+  Indulgent: {tab:'gy-t-ind',   cat:'ct-ind',   card:'cd-ind',   ic:'ic-ind',   dot:'#0891b2', badge:'linear-gradient(135deg,#0e7490,#0891b2)', mixin:'#e0f7fe', mixinL:'#0c4a6e', heroBg:'linear-gradient(135deg,#0e7490,#0891b2)'},
+};
+const GY_CE = {Fruity:'🍓', Indulgent:'🍫'};
+const GY_CATS = ['All','Fruity','Indulgent'];
 
+const GY_BASE = [
+  '200g nonfat Greek yogurt',
+  '150ml DariGold Whole Milk',
+  '30g allulose or monk fruit sweetener',
+  '1g (¼ tsp) xanthan gum',
+  'Pinch of salt',
+];
+
+const GY_R = [
+  // ── FRUITY (5) ──
+  {id:101, e:'🍓', n:'Strawberry Fro-Yo',       c:'Fruity',    cal:280, p:26, ch:18, f:5,
+   extras:['100g frozen strawberries (blended in)','½ tsp vanilla extract'],
+   m:'Crushed graham crackers mixed in or crumbled on top', nt:'Blend the frozen strawberries directly into the base — they add flavour and help with the creamy texture.'},
+  {id:102, e:'🍋', n:'Lemon Cheesecake',         c:'Fruity',    cal:260, p:25, ch:16, f:5,
+   extras:['Zest of 1 lemon','15g fresh lemon juice','½ tsp vanilla extract'],
+   m:'Crushed graham crackers — mix in or crumble on top after spinning', nt:'Fresh lemon only — bottled juice can\'t replicate the brightness. Zest is non-negotiable for the real cheesecake flavour.'},
+  {id:103, e:'🫐', n:'Blueberry Fro-Yo',         c:'Fruity',    cal:285, p:25, ch:20, f:5,
+   extras:['80g frozen blueberries (blended in)','½ tsp vanilla extract'],
+   m:'Granola added via Mix-In setting or sprinkled on top', nt:'Frozen blueberries work better than fresh here — better texture and more concentrated flavour.'},
+  {id:104, e:'🥭', n:'Mango Fro-Yo',             c:'Fruity',    cal:290, p:25, ch:22, f:5,
+   extras:['100g carabao mango flesh (ripe and blended)','10g fresh lime juice'],
+   m:'Crushed graham crackers for mango float vibes', nt:'The carabao mango is already very sweet — taste before adding extra sweetener. Lime juice brightens everything up.'},
+  {id:105, e:'🍑', n:'Peach Fro-Yo',             c:'Fruity',    cal:275, p:25, ch:19, f:5,
+   extras:['100g frozen peaches (blended in)','½ tsp vanilla extract','Pinch of cinnamon'],
+   m:'Crushed graham crackers + extra cinnamon on top', nt:'Frozen peaches blend smoother than fresh. The cinnamon is subtle but makes it taste like peach cobbler.'},
+
+  // ── INDULGENT (5) ──
+  {id:106, e:'☕', n:'Coffee Fro-Yo',            c:'Indulgent', cal:245, p:27, ch:14, f:5,
+   extras:['1 shot cooled espresso (or 1 tsp espresso powder dissolved in 15ml warm water)','½ tsp vanilla extract'],
+   m:'Chocolate chips added via Mix-In setting', nt:'Make sure the espresso is completely cooled before blending — hot liquid can cook the proteins in the yogurt.'},
+  {id:107, e:'🍫', n:'Chocolate Fro-Yo',         c:'Indulgent', cal:275, p:28, ch:16, f:5,
+   extras:['15g black cocoa powder','Extra 10g sweetener (add to base total)'],
+   m:'Oreo Thins (cream removed) via Mix-In setting', nt:'Black cocoa keeps the flavour deep and rich without adding extra fat. The extra sweetener balances the bitterness.'},
+  {id:108, e:'🥜', n:'Peanut Butter Banana',     c:'Indulgent', cal:320, p:27, ch:26, f:7,
+   extras:['1 small ripe banana (~80g)','15g PBfit powder (or 1 tbsp natural PB)'],
+   m:'Chocolate chips added via Mix-In setting', nt:'A very ripe banana blends smoother and tastes sweeter. PBfit keeps the fat low while delivering full peanut butter flavour.'},
+  {id:109, e:'🎂', n:'Cake Batter Fro-Yo',       c:'Indulgent', cal:260, p:25, ch:15, f:5,
+   extras:['1 tsp cake batter extract','½ tsp vanilla extract'],
+   m:'Rainbow sprinkles folded in by hand after spinning', nt:'The high protein yogurt base makes this taste almost like real birthday cake ice cream. Fold sprinkles by hand — don\'t use the Mix-In setting or they dissolve.'},
+  {id:110, e:'🍬', n:'Salted Caramel Fro-Yo',    c:'Indulgent', cal:265, p:25, ch:15, f:5,
+   extras:['1 tsp caramel extract','Extra pinch of salt (generous!)'],
+   m:'Chopped Rolos or caramel-filled chocolate — add by hand after spinning', nt:'Add Rolos by hand after spinning — the Mix-In setting destroys them. They should be in whole small chunks.'},
+];
+
+const GY_STEPS = [
+  'Blend the base ingredients + extras together until smooth.',
+  'Pour into your Ninja Creami pint and freeze for at least 16 hours.',
+  'Run the pint under hot water for 60 seconds.',
+  "Spin on the 'Lite Ice Cream' setting.",
+  'Respin 1–2 more times — fro-yo bases often need an extra spin to get creamy.',
+  "Add mix-ins using the 'Mix-In' setting, or fold in gently by hand.",
+];
+
+// ─────────────────────────────────────────
+// STATE
+// ─────────────────────────────────────────
+let creamiCat = 'All', creamiSearch = '';
+let gyCat = 'All', gySearch = '';
+
+// ─────────────────────────────────────────
+// NAVIGATION
+// ─────────────────────────────────────────
 function launch() {
   document.getElementById('cover').classList.add('gone');
   document.getElementById('home').classList.add('on');
 }
 
-function enterSection() {
+function openSection(which) {
   document.getElementById('home').classList.remove('on');
-  document.getElementById('app').classList.add('on');
-  renderTabs(); renderList();
-}
-
-function goHome() {
-  document.getElementById('app').classList.remove('on');
-  document.getElementById('home').classList.add('on');
-  srchVal = '';
-  actCat = 'All';
-  document.getElementById('srch').value = '';
-}
-
-function renderTabs() {
-  document.getElementById('tabs').innerHTML = CATS.map(c => {
-    const a = c === actCat;
-    const cls = 'tab' + (a ? ' ' + (c==='All'?'t-all':S[c]?.tab||'t-all') : '');
-    const lbl = c==='All' ? '🍨 All' : CE[c]+' '+c;
-    return `<div class="${cls}" onclick="setTab('${c}')">${lbl}</div>`;
-  }).join('');
-}
-
-function setTab(c) { actCat = c; renderTabs(); renderList(); }
-function doFilter() { srchVal = document.getElementById('srch').value.toLowerCase(); renderList(); }
-
-function getVisible() {
-  return R.filter(r => {
-    const mc = actCat === 'All' || r.c === actCat;
-    const ms = !srchVal || r.n.toLowerCase().includes(srchVal) || r.c.toLowerCase().includes(srchVal) || r.i.some(x => x.toLowerCase().includes(srchVal));
-    return mc && ms;
-  });
-}
-
-function renderList() {
-  const list = document.getElementById('list');
-  const empty = document.getElementById('empty');
-  const cnt = document.getElementById('cnt');
-  const vis = getVisible();
-  cnt.textContent = `${vis.length} recipe${vis.length!==1?'s':''}`;
-  if (!vis.length) { list.innerHTML = ''; empty.classList.add('on'); return; }
-  empty.classList.remove('on');
-  if (actCat === 'All' && !srchVal) {
-    const grp = {};
-    vis.forEach(r => { (grp[r.c]=grp[r.c]||[]).push(r); });
-    list.innerHTML = Object.keys(grp).map(cat => {
-      const s = S[cat];
-      return `<div class="cat-row"><div class="cat-tag ${s.cat}">${CE[cat]} ${cat}</div><div class="cat-line"></div></div>` + grp[cat].map(cardHTML).join('');
-    }).join('');
+  if (which === 'creami') {
+    document.getElementById('creami').classList.add('on');
+    renderTabs('creami'); renderList('creami');
   } else {
-    list.innerHTML = vis.map(cardHTML).join('');
+    document.getElementById('froyo').classList.add('on');
+    renderTabs('gy'); renderList('gy');
   }
 }
 
-function cardHTML(r) {
-  const s = S[r.c];
-  return `<div class="card ${s.card}" onclick="openR(${r.id})">
+function goHome() {
+  document.getElementById('creami').classList.remove('on');
+  document.getElementById('froyo').classList.remove('on');
+  document.getElementById('home').classList.add('on');
+  creamiCat = 'All'; creamiSearch = '';
+  gyCat = 'All'; gySearch = '';
+  document.getElementById('creami-srch').value = '';
+  document.getElementById('gy-srch').value = '';
+}
+
+// ─────────────────────────────────────────
+// TABS
+// ─────────────────────────────────────────
+function renderTabs(sec) {
+  if (sec === 'creami') {
+    document.getElementById('creami-tabs').innerHTML = CATS.map(c => {
+      const a = c === creamiCat;
+      const cls = 'tab' + (a ? ' '+(c==='All'?'t-all':S[c].tab) : ' inactive');
+      const lbl = c==='All' ? '🍨 All' : CE[c]+' '+c;
+      return `<div class="${cls}" onclick="setTab('creami','${c}')">${lbl}</div>`;
+    }).join('');
+  } else {
+    document.getElementById('gy-tabs').innerHTML = GY_CATS.map(c => {
+      const a = c === gyCat;
+      const cls = 'tab' + (a ? ' '+(c==='All'?'gy-t-all':GY_S[c].tab) : ' inactive');
+      const lbl = c==='All' ? '🫙 All' : GY_CE[c]+' '+c;
+      return `<div class="${cls}" onclick="setTab('gy','${c}')">${lbl}</div>`;
+    }).join('');
+  }
+}
+
+function setTab(sec, c) {
+  if (sec === 'creami') creamiCat = c;
+  else gyCat = c;
+  renderTabs(sec); renderList(sec);
+}
+
+function doFilter(sec) {
+  if (sec === 'creami') creamiSearch = document.getElementById('creami-srch').value.toLowerCase();
+  else gySearch = document.getElementById('gy-srch').value.toLowerCase();
+  renderList(sec);
+}
+
+// ─────────────────────────────────────────
+// LIST RENDERING
+// ─────────────────────────────────────────
+function getVisible(sec) {
+  if (sec === 'creami') {
+    return R.filter(r => {
+      const mc = creamiCat === 'All' || r.c === creamiCat;
+      const ms = !creamiSearch || r.n.toLowerCase().includes(creamiSearch) || r.c.toLowerCase().includes(creamiSearch) || r.i.some(x => x.toLowerCase().includes(creamiSearch));
+      return mc && ms;
+    });
+  } else {
+    return GY_R.filter(r => {
+      const mc = gyCat === 'All' || r.c === gyCat;
+      const ms = !gySearch || r.n.toLowerCase().includes(gySearch) || r.c.toLowerCase().includes(gySearch) || r.extras.some(x => x.toLowerCase().includes(gySearch));
+      return mc && ms;
+    });
+  }
+}
+
+function renderList(sec) {
+  const isGY = sec === 'gy';
+  const listEl = document.getElementById(isGY ? 'gy-list' : 'creami-list');
+  const emptyEl = document.getElementById(isGY ? 'gy-empty' : 'creami-empty');
+  const cntEl  = document.getElementById(isGY ? 'gy-cnt' : 'creami-cnt');
+  const vis = getVisible(sec);
+  cntEl.textContent = `${vis.length} recipe${vis.length!==1?'s':''}`;
+  if (!vis.length) { listEl.innerHTML = ''; emptyEl.classList.add('on'); return; }
+  emptyEl.classList.remove('on');
+  const cat = isGY ? gyCat : creamiCat;
+  const search = isGY ? gySearch : creamiSearch;
+  if (cat === 'All' && !search) {
+    const grp = {};
+    vis.forEach(r => { (grp[r.c] = grp[r.c] || []).push(r); });
+    listEl.innerHTML = Object.keys(grp).map(cat => {
+      const s = isGY ? GY_S[cat] : S[cat];
+      const lineClass = isGY ? 'cat-line cat-line-gy' : 'cat-line';
+      return `<div class="cat-row"><div class="cat-tag ${s.cat}">${isGY?GY_CE[cat]:CE[cat]} ${cat}</div><div class="${lineClass}"></div></div>`
+        + grp[cat].map(r => cardHTML(r, isGY)).join('');
+    }).join('');
+  } else {
+    listEl.innerHTML = vis.map(r => cardHTML(r, isGY)).join('');
+  }
+}
+
+function cardHTML(r, isGY) {
+  const s = isGY ? GY_S[r.c] : S[r.c];
+  const basePill = isGY ? `<span class="pill p-base">🥛 GY + DariGold base</span>` : '';
+  return `<div class="card ${s.card}" onclick="openR(${r.id},${isGY})">
     <div class="card-icon ${s.ic}">${r.e}</div>
     <div class="card-body">
       <div class="card-name">${r.n}</div>
       <div class="pills">
-        <span class="pill p-cal">${r.cal??'–'} cal</span>
-        ${r.p?`<span class="pill p-pro">${r.p}g P</span>`:''}
-        ${r.ch?`<span class="pill p-carb">${r.ch}g C</span>`:''}
-        ${r.f!==null&&r.f!==undefined?`<span class="pill p-fat">${r.f}g F</span>`:''}
+        <span class="pill p-cal">${r.cal} cal</span>
+        <span class="pill p-pro">${r.p}g P</span>
+        <span class="pill p-carb">${r.ch}g C</span>
+        <span class="pill p-fat">${r.f}g F</span>
+        ${basePill}
       </div>
     </div>
     <div class="card-arr">›</div>
   </div>`;
 }
 
-function openR(id) {
-  const r = R.find(x => x.id === id);
-  const s = S[r.c];
+// ─────────────────────────────────────────
+// MODAL
+// ─────────────────────────────────────────
+function openR(id, isGY) {
+  const r = isGY ? GY_R.find(x => x.id === id) : R.find(x => x.id === id);
+  const s = isGY ? GY_S[r.c] : S[r.c];
+  const steps = isGY ? GY_STEPS : STEPS;
+
   const macros = `<div class="mgrid">
-    <div class="mc mc-cal"><div class="mc-val">${r.cal??'–'}</div><div class="mc-lbl">Calories</div></div>
-    <div class="mc mc-pro"><div class="mc-val">${r.p?r.p+'g':'–'}</div><div class="mc-lbl">Protein</div></div>
-    <div class="mc mc-carb"><div class="mc-val">${r.ch?r.ch+'g':'–'}</div><div class="mc-lbl">Carbs</div></div>
-    <div class="mc mc-fat"><div class="mc-val">${r.f!==null&&r.f!==undefined?r.f+'g':'–'}</div><div class="mc-lbl">Fat</div></div>
+    <div class="mc mc-cal"><div class="mc-val">${r.cal}</div><div class="mc-lbl">Calories</div></div>
+    <div class="mc mc-pro"><div class="mc-val">${r.p}g</div><div class="mc-lbl">Protein</div></div>
+    <div class="mc mc-carb"><div class="mc-val">${r.ch}g</div><div class="mc-lbl">Carbs</div></div>
+    <div class="mc mc-fat"><div class="mc-val">${r.f}g</div><div class="mc-lbl">Fat</div></div>
   </div>`;
-  const ings = r.i.map(x => `<div class="ing-row"><div class="ing-dot" style="background:${s.dot}"></div><span>${x}</span></div>`).join('');
-  const steps = STEPS.map((st,i) => `<div class="step"><div class="snum" style="background:${s.badge}">${i+1}</div><span>${st}</span></div>`).join('');
+
+  let ingsHTML;
+  if (isGY) {
+    const baseRows = GY_BASE.map(x => `<div class="ing-row"><div class="ing-dot" style="background:${s.dot}"></div><span>${x}</span></div>`).join('');
+    const extraRows = r.extras.map(x => `<div class="ing-row"><div class="ing-dot" style="background:${s.dot}"></div><span>${x}</span></div>`).join('');
+    ingsHTML = `<div class="gy-base-box"><div class="gy-base-lbl">🥛 Shared Base (all recipes)</div>${baseRows}</div><div class="stitle" style="margin-top:.2rem">✨ Extras for this recipe</div>${extraRows}`;
+  } else {
+    ingsHTML = r.i.map(x => `<div class="ing-row"><div class="ing-dot" style="background:${s.dot}"></div><span>${x}</span></div>`).join('');
+  }
+
+  const stepsHTML = steps.map((st,i) => `<div class="step"><div class="snum" style="background:${s.badge}">${i+1}</div><span>${st}</span></div>`).join('');
   const mix = r.m ? `<div class="msec"><div class="stitle">🎉 Mix-ins & Toppings</div><div class="mixin-box" style="background:${s.mixin};border:2px solid ${s.dot}30"><div class="mixin-lbl" style="color:${s.mixinL}">Add After Spinning</div><div class="mixin-txt">${r.m}</div></div></div>` : '';
   const note = r.nt ? `<div class="note-box">💡 ${r.nt}</div>` : '';
 
@@ -485,14 +651,14 @@ function openR(id) {
       <div class="mhandle"></div>
       <span class="mbig">${r.e}</span>
       <div class="mtitle">${r.n}</div>
-      <span class="mbadge" style="background:${s.badge}">${CE[r.c]} ${r.c}</span>
+      <span class="mbadge" style="background:${s.badge}">${isGY?GY_CE[r.c]:CE[r.c]} ${r.c}</span>
     </div>
     ${macros}
     <div class="divvy"></div>
-    <div class="msec"><div class="stitle">🛒 Ingredients</div>${ings}${note}</div>
+    <div class="msec"><div class="stitle">🛒 Ingredients</div>${ingsHTML}${note}</div>
     ${mix}
     <div class="divvy" style="margin-top:.8rem"></div>
-    <div class="msec"><div class="stitle">📋 Instructions</div><div class="steps">${steps}</div></div>
+    <div class="msec"><div class="stitle">📋 Instructions</div><div class="steps">${stepsHTML}</div></div>
     <button class="xcls" onclick="close_()">✕</button>
   `;
   document.getElementById('msheet').scrollTop = 0;
