@@ -41,11 +41,39 @@ body{font-family:'Nunito',sans-serif;background:var(--bg);color:var(--text);min-
 .cvr-cone{font-size:4.5rem;display:block;animation:cone 1.6s ease-in-out infinite}
 @keyframes cone{0%,100%{transform:translateY(0) rotate(-6deg)}50%{transform:translateY(-18px) rotate(6deg)}}
 .cvr-title{font-family:'Righteous',cursive;font-size:clamp(3rem,16vw,5.5rem);color:#fff;text-shadow:4px 4px 0 rgba(0,0,0,.12),0 0 50px rgba(255,255,255,.35);line-height:.95;display:block;letter-spacing:.04em}
-.cvr-sub{font-size:.8rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.85);margin-top:.6rem;display:block}
 .cvr-badges{display:flex;gap:.5rem;justify-content:center;margin-top:1.5rem;flex-wrap:wrap}
 .cvr-badge{background:rgba(255,255,255,.92);border-radius:100px;padding:.4rem 1rem;font-size:.75rem;font-weight:800;color:var(--text)}
 .cvr-btn{margin-top:2.2rem;display:inline-flex;align-items:center;gap:.5rem;background:#fff;color:var(--pink);font-weight:900;font-size:.95rem;padding:.85rem 2.2rem;border-radius:100px;box-shadow:0 8px 28px rgba(255,107,157,.4);animation:btnpop 2s ease-in-out infinite;letter-spacing:.02em}
 @keyframes btnpop{0%,100%{transform:scale(1);box-shadow:0 8px 28px rgba(255,107,157,.4)}50%{transform:scale(1.04);box-shadow:0 14px 36px rgba(255,107,157,.55)}}
+
+/* ── HOME SCREEN ── */
+#home{display:none;min-height:100vh;background:var(--bg)}
+#home.on{display:block}
+.home-hdr{background:linear-gradient(135deg,var(--pink),var(--purple));padding:2.5rem 1.5rem 2rem;text-align:center}
+.home-logo-wrap{display:flex;align-items:center;justify-content:center;gap:.75rem;margin-bottom:.5rem}
+.home-logo{width:48px;height:48px;border-radius:50%;box-shadow:0 4px 16px rgba(0,0,0,.2)}
+.home-title{font-family:'Righteous',cursive;font-size:1.9rem;color:#fff;letter-spacing:.04em;text-shadow:2px 2px 0 rgba(0,0,0,.1)}
+.home-sub{font-size:.72rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.75);margin-top:.3rem}
+.home-body{padding:1.5rem 1.25rem 5rem}
+.home-section-lbl{font-family:'Righteous',cursive;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:.9rem}
+.section-cards{display:flex;flex-direction:column;gap:.85rem}
+.sc{border-radius:22px;padding:1.4rem 1.5rem;cursor:pointer;transition:transform .2s cubic-bezier(.34,1.56,.64,1),box-shadow .2s;position:relative;overflow:hidden}
+.sc:active{transform:scale(.97)}
+.sc-active{background:linear-gradient(135deg,var(--pink),var(--purple));box-shadow:0 8px 28px rgba(199,125,255,.38)}
+.sc-soon{background:#f3f0f8;cursor:default}
+.sc-row{display:flex;align-items:center;gap:1rem}
+.sc-icon{font-size:2.4rem;flex-shrink:0}
+.sc-info{flex:1}
+.sc-title{font-family:'Righteous',cursive;font-size:1.25rem;letter-spacing:.03em}
+.sc-active .sc-title{color:#fff}
+.sc-soon .sc-title{color:#c0b8d0}
+.sc-desc{font-size:.75rem;font-weight:700;margin-top:.2rem}
+.sc-active .sc-desc{color:rgba(255,255,255,.8)}
+.sc-soon .sc-desc{color:#c0b8d0}
+.sc-pill{display:inline-flex;align-items:center;gap:.3rem;font-size:.62rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:.22rem .65rem;border-radius:100px;margin-top:.55rem}
+.sc-active .sc-pill{background:rgba(255,255,255,.25);color:#fff}
+.sc-soon .sc-pill{background:#e8e0f0;color:#b0a8c0}
+.sc-arr{font-size:1.5rem;font-weight:900;color:rgba(255,255,255,.7);flex-shrink:0}
 
 /* ── APP ── */
 #app{display:none;min-height:100vh}
@@ -54,7 +82,11 @@ body{font-family:'Nunito',sans-serif;background:var(--bg);color:var(--text);min-
 /* ── HEADER ── */
 header{background:linear-gradient(135deg,var(--pink),var(--purple));padding:1rem 1.25rem .6rem;position:sticky;top:0;z-index:100;box-shadow:0 4px 20px rgba(199,125,255,.3)}
 .hdr{display:flex;align-items:center;justify-content:space-between;gap:.5rem}
-.hdr-title{font-family:'Righteous',cursive;font-size:1.6rem;color:#fff;letter-spacing:.04em;text-shadow:2px 2px 0 rgba(0,0,0,.1)}
+.hdr-left{display:flex;align-items:center;gap:.5rem}
+.back-btn{background:rgba(255,255,255,.25);border:none;color:#fff;width:32px;height:32px;border-radius:50%;font-size:1.2rem;cursor:pointer;display:flex;align-items:center;justify-content:center;font-weight:900;flex-shrink:0;transition:background .2s}
+.back-btn:active{background:rgba(255,255,255,.4)}
+.hdr-title{font-family:'Righteous',cursive;font-size:1.5rem;color:#fff;letter-spacing:.04em;text-shadow:2px 2px 0 rgba(0,0,0,.1);display:flex;align-items:center;gap:.4rem}
+.hdr-title img{width:28px;height:28px;border-radius:50%;box-shadow:0 2px 6px rgba(0,0,0,.2)}
 .hdr-pill{background:rgba(255,255,255,.25);color:#fff;font-size:.68rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:.3rem .75rem;border-radius:100px;white-space:nowrap}
 .srch-wrap{padding:.65rem 0 0}
 .srch{width:100%;background:#fff;border:none;border-radius:14px;padding:.72rem 1rem .72rem 2.8rem;font-family:'Nunito',sans-serif;font-size:.88rem;font-weight:700;color:var(--text);outline:none;box-shadow:0 4px 16px rgba(0,0,0,.12);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%23ff6b9d' stroke-width='2.5'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cpath d='M21 21l-4.35-4.35'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:.9rem center}
@@ -68,7 +100,7 @@ header{background:linear-gradient(135deg,var(--pink),var(--purple));padding:1rem
 .t-all{background:linear-gradient(135deg,var(--pink),var(--purple));color:#fff;border-color:transparent;box-shadow:0 4px 14px rgba(255,107,157,.4)}
 .t-choc{background:linear-gradient(135deg,#6b3a1f,#c0703a);color:#fff;border-color:transparent;box-shadow:0 4px 14px rgba(107,58,31,.35)}
 .t-van{background:linear-gradient(135deg,var(--yellow),var(--orange));color:#fff;border-color:transparent;box-shadow:0 4px 14px rgba(255,217,61,.4)}
-.t-cake{background:linear-gradient(135deg,var(--pink),var(--coral));color:#fff;border-color:transparent;box-shadow:0 4px 14px rgba(255,107,107,.4)}
+.t-fil{background:linear-gradient(135deg,#7b5ea7,#c77dff);color:#fff;border-color:transparent;box-shadow:0 4px 14px rgba(199,125,255,.4)}
 .t-other{background:linear-gradient(135deg,var(--mint),var(--sky));color:#fff;border-color:transparent;box-shadow:0 4px 14px rgba(107,203,119,.4)}
 
 /* ── LIST ── */
@@ -77,7 +109,7 @@ header{background:linear-gradient(135deg,var(--pink),var(--purple));padding:1rem
 .cat-tag{font-family:'Righteous',cursive;font-size:.9rem;letter-spacing:.04em;padding:.28rem .9rem;border-radius:100px;color:#fff;white-space:nowrap}
 .ct-choc{background:linear-gradient(135deg,#6b3a1f,#c0703a)}
 .ct-van{background:linear-gradient(135deg,var(--yellow),var(--orange))}
-.ct-cake{background:linear-gradient(135deg,var(--pink),var(--coral))}
+.ct-fil{background:linear-gradient(135deg,#7b5ea7,#c77dff)}
 .ct-other{background:linear-gradient(135deg,var(--mint),var(--sky))}
 .cat-line{flex:1;height:2px;border-radius:2px;background:#e8d0e8;opacity:.5}
 
@@ -88,12 +120,12 @@ header{background:linear-gradient(135deg,var(--pink),var(--purple));padding:1rem
 .card::after{content:'';position:absolute;right:0;top:0;bottom:0;width:5px;border-radius:0 18px 18px 0}
 .cd-choc::after{background:linear-gradient(135deg,#6b3a1f,#c0703a)}
 .cd-van::after{background:linear-gradient(135deg,var(--yellow),var(--orange))}
-.cd-cake::after{background:linear-gradient(135deg,var(--pink),var(--coral))}
+.cd-fil::after{background:linear-gradient(135deg,#7b5ea7,#c77dff)}
 .cd-other::after{background:linear-gradient(135deg,var(--mint),var(--sky))}
 .card-icon{width:50px;height:50px;border-radius:13px;display:flex;align-items:center;justify-content:center;font-size:1.7rem;flex-shrink:0}
 .ic-choc{background:#fff3e8}
 .ic-van{background:#fffde8}
-.ic-cake{background:#fff0f5}
+.ic-fil{background:#f5eeff}
 .ic-other{background:#efffee}
 .card-body{flex:1;min-width:0}
 .card-name{font-weight:900;font-size:.93rem;margin-bottom:.32rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--dark)}
@@ -170,13 +202,52 @@ header{background:linear-gradient(135deg,var(--pink),var(--purple));padding:1rem
   <div class="cvr-inner">
     <span class="cvr-cone">🍦</span>
     <span class="cvr-title">CREAMI<br>CRAVINGS</span>
-    <span class="cvr-sub">by @fitnessproductfinder · Eli Mack</span>
     <div class="cvr-badges">
-      <span class="cvr-badge">🏋️ High Protein</span>
-      <span class="cvr-badge">✂️ Low Calorie</span>
-      <span class="cvr-badge">📖 29 Free Recipes</span>
+      <span class="cvr-badge">🥛 DariGold Whole Milk</span>
+      <span class="cvr-badge">✂️ No Protein Powder</span>
+      <span class="cvr-badge">📖 17 Recipes</span>
     </div>
     <div class="cvr-btn">Let's get scooping! 🍨</div>
+  </div>
+</div>
+
+<!-- HOME SCREEN -->
+<div id="home">
+  <div class="home-hdr">
+    <div class="home-logo-wrap">
+      <img src="logo.svg" class="home-logo" alt="Creami Cravings">
+      <span class="home-title">Creami Cravings</span>
+    </div>
+    <div class="home-sub">Choose your recipe book</div>
+  </div>
+  <div class="home-body">
+    <div class="home-section-lbl">Recipe Collections</div>
+    <div class="section-cards">
+
+      <div class="sc sc-active" onclick="enterSection()">
+        <div class="sc-row">
+          <span class="sc-icon">🥛</span>
+          <div class="sc-info">
+            <div class="sc-title">No Protein Powder</div>
+            <div class="sc-desc">DariGold Whole Milk · Classic Creami</div>
+            <div class="sc-pill">17 Recipes · Active</div>
+          </div>
+          <span class="sc-arr">›</span>
+        </div>
+      </div>
+
+      <div class="sc sc-soon">
+        <div class="sc-row">
+          <span class="sc-icon">🫙</span>
+          <div class="sc-info">
+            <div class="sc-title">Greek Yogurt</div>
+            <div class="sc-desc">High protein · Thick &amp; creamy bases</div>
+            <div class="sc-pill">Coming Soon</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
   </div>
 </div>
 
@@ -184,8 +255,11 @@ header{background:linear-gradient(135deg,var(--pink),var(--purple));padding:1rem
 <div id="app">
   <header>
     <div class="hdr">
-      <div class="hdr-title"><img src="logo.svg" style="width:32px;height:32px;vertical-align:middle;margin-right:.4rem;border-radius:50%;box-shadow:0 2px 8px rgba(199,125,255,.4)"> Creami Cravings</div>
-      <div class="hdr-pill" id="cnt">29 recipes</div>
+      <div class="hdr-left">
+        <button class="back-btn" onclick="goHome()">‹</button>
+        <div class="hdr-title"><img src="logo.svg" alt=""> Creami Cravings</div>
+      </div>
+      <div class="hdr-pill" id="cnt">17 recipes</div>
     </div>
     <div class="srch-wrap">
       <input class="srch" type="text" placeholder="Search flavors or ingredients…" id="srch" oninput="doFilter()">
@@ -194,10 +268,9 @@ header{background:linear-gradient(135deg,var(--pink),var(--purple));padding:1rem
   <div class="tabs" id="tabs"></div>
   <div class="list" id="list"></div>
   <div class="empty" id="empty"><span class="empty-ico">🤷‍♀️</span><div class="empty-txt">No recipes match — try another search!</div></div>
-  <div class="bbar"><div class="bl">📱 @fitnessproductfinder</div><div class="br">Macros = full pint ✓</div></div>
+  <div class="bbar"><div class="bl">🥛 DariGold Whole Milk</div><div class="br">Full pint macros ✓</div></div>
 </div>
 
-<!-- MODAL -->
 <div id="modal">
   <div class="mbk" onclick="close_()"></div>
   <div class="msheet" id="msheet"><div id="mbody"></div></div>
@@ -205,120 +278,108 @@ header{background:linear-gradient(135deg,var(--pink),var(--purple));padding:1rem
 
 <script>
 const S = {
-  Chocolate:    {tab:'t-choc', cat:'ct-choc', card:'cd-choc', ic:'ic-choc', dot:'#c0703a', badge:'linear-gradient(135deg,#6b3a1f,#c0703a)', mixin:'#fff3e8', mixinL:'#7a3a10', heroBg:'linear-gradient(135deg,#6b3a1f,#c0703a)'},
-  Vanilla:      {tab:'t-van',  cat:'ct-van',  card:'cd-van',  ic:'ic-van',  dot:'#ff9a3c', badge:'linear-gradient(135deg,#ffd93d,#ff9a3c)', mixin:'#fffde8', mixinL:'#996600', heroBg:'linear-gradient(135deg,#ffd93d,#ff9a3c)'},
-  'Cake Batter':{tab:'t-cake', cat:'ct-cake', card:'cd-cake', ic:'ic-cake', dot:'#ff6b9d', badge:'linear-gradient(135deg,#ff6b9d,#ff6b6b)', mixin:'#fff0f5', mixinL:'#cc1155', heroBg:'linear-gradient(135deg,#ff6b9d,#ff6b6b)'},
-  Other:        {tab:'t-other',cat:'ct-other', card:'cd-other',ic:'ic-other',dot:'#6bcb77', badge:'linear-gradient(135deg,#6bcb77,#4fc3f7)', mixin:'#efffee', mixinL:'#2d9b2d', heroBg:'linear-gradient(135deg,#6bcb77,#4fc3f7)'},
+  Chocolate: {tab:'t-choc', cat:'ct-choc', card:'cd-choc', ic:'ic-choc', dot:'#c0703a', badge:'linear-gradient(135deg,#6b3a1f,#c0703a)', mixin:'#fff3e8', mixinL:'#7a3a10', heroBg:'linear-gradient(135deg,#6b3a1f,#c0703a)'},
+  Vanilla:   {tab:'t-van',  cat:'ct-van',  card:'cd-van',  ic:'ic-van',  dot:'#ff9a3c', badge:'linear-gradient(135deg,#ffd93d,#ff9a3c)', mixin:'#fffde8', mixinL:'#996600', heroBg:'linear-gradient(135deg,#ffd93d,#ff9a3c)'},
+  Filipino:  {tab:'t-fil',  cat:'ct-fil',  card:'cd-fil',  ic:'ic-fil',  dot:'#c77dff', badge:'linear-gradient(135deg,#7b5ea7,#c77dff)', mixin:'#f5eeff', mixinL:'#7744bb', heroBg:'linear-gradient(135deg,#7b5ea7,#c77dff)'},
+  Other:     {tab:'t-other',cat:'ct-other', card:'cd-other',ic:'ic-other',dot:'#6bcb77', badge:'linear-gradient(135deg,#6bcb77,#4fc3f7)', mixin:'#efffee', mixinL:'#2d9b2d', heroBg:'linear-gradient(135deg,#6bcb77,#4fc3f7)'},
 };
-const CE = {Chocolate:'🍫',Vanilla:'🍦','Cake Batter':'🎂',Other:'✨'};
-const CATS = ['All','Chocolate','Vanilla','Cake Batter','Other'];
+const CE = {Chocolate:'🍫', Vanilla:'🍦', Filipino:'🇵🇭', Other:'✨'};
+const CATS = ['All','Chocolate','Vanilla','Filipino','Other'];
 
+// All macros calculated from DariGold Whole Milk (414ml = 270 cal, 14g fat, 22g carb, 15g protein)
 const R = [
-  {id:1, e:'🍫', n:'Brownie Batter', c:'Chocolate', cal:193, p:36, ch:15, f:5,
-   i:['1 chocolate protein shake (350–400ml)','20–25g monk fruit sweetener','20g black cocoa powder','Pinch of salt','1g (¼ tsp) xanthan gum'],
-   m:null, nt:'Use black cocoa — not regular cocoa — for that deep fudgy colour and flavour.'},
-  {id:2, e:'🏔️', n:'Rocky Road', c:'Chocolate', cal:268, p:34, ch:16, f:9,
-   i:['1 Fairlife Chocolate Protein Shake (or 360g chocolate milk)','20g monk fruit sweetener','10g cocoa powder','Pinch of salt','1g (¼ tsp) xanthan gum'],
-   m:'10g nuts of choice + 10g mini marshmallows', nt:null},
-  {id:3, e:'💊', n:'Chocolate Therapy', c:'Chocolate', cal:338, p:48, ch:30, f:7,
-   i:['1 Quest Chocolate Protein Milkshake','20–25g monk fruit sweetener','10g cocoa powder','7–10g chocolate Jello pudding mix','Pinch of salt','1g (¼ tsp) xanthan gum'],
-   m:'3 Oreo Thins (cream removed)', nt:'Quest milkshake base pushes this to 48g protein — one of the highest in the collection.'},
-  {id:4, e:'🌰', n:'Nutella', c:'Chocolate', cal:273, p:33, ch:21, f:9,
-   i:['1 Fairlife Chocolate Protein Shake (or 360g chocolate milk)','20–25g monk fruit sweetener','10g cocoa powder','18g (1 tbsp) Nutella','½ tsp hazelnut syrup (optional)','Pinch of salt','1g (¼ tsp) xanthan gum'],
-   m:null, nt:'Drizzle extra Nutella on top after spinning for max hazelnut energy.'},
-  {id:5, e:'🌶️', n:'Mexican Chocolate', c:'Chocolate', cal:255, p:47, ch:6, f:5,
-   i:['1 Quest High Protein Milkshake','20–25g monk fruit sweetener','10g cocoa powder','½ tsp cinnamon','2–3 pinches cayenne pepper','Pinch of salt','1g (¼ tsp) xanthan gum'],
-   m:null, nt:'⚠️ Only 2 pinches of cayenne to start — it gets spicy VERY fast. You can always add more on top.'},
-  {id:6, e:'🍪', n:'The Tonight Dough', c:'Chocolate', cal:334, p:33, ch:40, f:10,
-   i:['1 chocolate protein shake (350–400ml)','20g monk fruit sweetener','10g cocoa powder','Pinch of salt','1g (¼ tsp) xanthan gum'],
-   m:"28g Ben & Jerry's Tonight Dough cookie dough pieces + 2 Oreo Thins (cream removed)", nt:null},
-  {id:7, e:'🐟', n:'Phish Food', c:'Chocolate', cal:293, p:37, ch:27, f:7,
-   i:['1 chocolate protein shake','25g monk fruit sweetener','10g cocoa powder','Pinch of salt','1g (¼ tsp) xanthan gum'],
-   m:'15g mini marshmallows + 6g caramel syrup + ½ Hormbles protein chocolate bar', nt:'Fill the hole with chocolate + marshmallows, run Mix-in, then drizzle caramel on top.'},
-  {id:8, e:'🌿', n:'Mint Chocolate', c:'Chocolate', cal:293, p:36, ch:30, f:7,
-   i:['1 chocolate protein shake (350–400ml)','20–25g monk fruit sweetener','20g black cocoa powder','⅛ tsp peppermint extract','Pinch of salt','1g (¼ tsp) xanthan gum'],
-   m:'3 Oreo Thins (cream removed) + 10g mini marshmallows', nt:null},
-  {id:9, e:'🍦', n:'Oreo McFlurry', c:'Vanilla', cal:233, p:23, ch:29, f:2,
-   i:['400g fat-free ultra-filtered milk (Fairlife or Darigold)','40–45g monk fruit sweetener','1 tsp vanilla bean paste','Pinch of salt','1g (¼ tsp) xanthan gum'],
-   m:'5 Oreo Thins (cream removed)', nt:'The recipe that started it all — 25M+ views. Use vanilla bean PASTE not extract for best flavour.'},
-  {id:10, e:'🤍', n:'Vanilla Ice Cream', c:'Vanilla', cal:135, p:22, ch:10, f:0,
-   i:['400g fat-free high protein milk','40–45g monk fruit sweetener','1 tsp vanilla bean paste','Pinch of salt','1g (¼ tsp) xanthan gum'],
-   m:null, nt:'The master vanilla base. Swap the extract to create almost any flavour you want.'},
-  {id:11, e:'👻', n:'Low Cal Vanilla', c:'Vanilla', cal:85, p:15, ch:19, f:0,
-   i:['400g Milk50 vanilla milk (or lowest-cal protein milk you can find)','40–45g monk fruit sweetener','½ tsp vanilla bean paste','Pinch of salt','1g (¼ tsp) xanthan gum'],
-   m:null, nt:'85 CALORIES for a full pint! The magic is Milk50 ultra-low-cal protein milk. Add Oreos if desired (+105 cal).'},
-  {id:12, e:'🟡', n:'M&M McFlurry', c:'Vanilla', cal:246, p:31, ch:17, f:6,
-   i:['1 vanilla protein shake (350–400ml)','20–25g monk fruit sweetener','½ tsp vanilla bean paste','Pinch of salt','1g (¼ tsp) xanthan gum'],
-   m:'20g M&Ms — mini M&Ms give you more pieces per gram!', nt:null},
-  {id:13, e:'🥛', n:'Milk and Cookies', c:'Vanilla', cal:308, p:30, ch:35, f:5,
-   i:['400g fat-free high protein milk','40–45g monk fruit sweetener','1 tsp vanilla bean paste','Pinch of salt','1g (¼ tsp) xanthan gum'],
-   m:'½ pkg Fuul Chocolate Chip Cookie Dough bites + 2 Oreo Thins', nt:'Mix in Oreos via the Mix-in setting, then top with cookie dough bites by hand.'},
-  {id:14, e:'🫐', n:'Raspberry Cheesecake', c:'Vanilla', cal:337, p:24, ch:26, f:13,
-   i:['400g fat-free high protein milk','22g whipped cream cheese','40–45g monk fruit sweetener','1 tsp vanilla bean paste','Pinch of salt','1g (¼ tsp) xanthan gum'],
-   m:'28g FROZEN raspberries + 14g Teddy Grahams (freeze them 1–2 hrs first!) + 15g white choc chips melted with 2g coconut oil',
-   nt:'Raspberries MUST be frozen — fresh ones add liquid and ruin the texture.'},
-  {id:15, e:'❤️', n:'Red Velvet Blizzard', c:'Vanilla', cal:303, p:32, ch:18, f:11,
-   i:['400g fat-free high protein milk','22g whipped cream cheese','40–45g monk fruit sweetener','1 tsp vanilla bean paste','Pinch of salt','1g (¼ tsp) xanthan gum'],
-   m:'½ Red Velvet Prime Bites brownie — chop into cubes and FREEZE it first!',
-   nt:'Freezing the brownie before mixing is critical — the Mix-in setting will otherwise pulverize it completely.'},
-  {id:16, e:'🍓', n:'Strawberry Cheesecake', c:'Vanilla', cal:265, p:32, ch:null, f:null,
-   i:['1 strawberry protein shake (350–400ml)','22g whipped cream cheese','20–25g monk fruit sweetener','Pinch of salt','1g xanthan gum'],
-   m:null, nt:'Topping: mix 100g fresh/frozen strawberries + 10–15g sweetener + splash of lemon juice. Refrigerate 1+ hour to macerate before serving.'},
-  {id:17, e:'🎯', n:'Moose Tracks', c:'Vanilla', cal:291, p:24, ch:null, f:null,
-   i:['400g fat-free high protein milk','40–45g monk fruit sweetener','1 tsp vanilla bean paste','Pinch of salt','1g (¼ tsp) xanthan gum'],
-   m:'1 peanut butter cup chopped (~15g) + 15g chocolate chips', nt:null},
-  {id:18, e:'🍮', n:'Salted Caramel Almond', c:'Vanilla', cal:288, p:25, ch:16, f:11,
-   i:['400g fat-free high protein milk','40–45g monk fruit sweetener','1 tsp vanilla bean paste','Pinch of salt','1g (¼ tsp) xanthan gum'],
-   m:'10g sliced almonds + 7g salted caramel sauce + 15g choc chips melted with 2g coconut oil',
-   nt:'Pour the melted chocolate over the top after spinning and tilt side-to-side for a gorgeous chocolate shell.'},
-  {id:19, e:'🥜', n:'Peanut Butter Oreo', c:'Vanilla', cal:345, p:31, ch:31, f:10,
-   i:['400g fat-free Fairlife milk','40–45g monk fruit sweetener','8g peanut butter','16g PBfit powder','Pinch of salt','1g (¼ tsp) xanthan gum'],
-   m:'3 Oreo Thins', nt:null},
-  {id:20, e:'🍫', n:'Vanilla Choc Chip', c:'Vanilla', cal:240, p:23, ch:21, f:9,
-   i:['400g fat-free Fairlife milk','40–45g monk fruit sweetener','1 tsp vanilla bean paste','Pinch of salt','1g (¼ tsp) xanthan gum'],
-   m:'20g chocolate chips + 3g coconut oil — melt together, pour into hole right before Mix-in cycle',
-   nt:'Melting chocolate with coconut oil makes it re-solidify into perfect creamy chips, not icy shards.'},
-  {id:21, e:'🎂', n:'Cake Batter Frosty', c:'Cake Batter', cal:135, p:22, ch:10, f:0,
-   i:['400g fat-free Fairlife milk','40–45g monk fruit sweetener','1 tsp cake batter extract','Pinch of salt','1g (¼ tsp) xanthan gum'],
-   m:null, nt:'Cake batter extract is the secret — find it near vanilla extract at any baking store.'},
-  {id:22, e:'👶', n:'Low Cal Cake Batter', c:'Cake Batter', cal:83, p:15, ch:18, f:0,
-   i:['400g Milk50 vanilla milk','40–45g monk fruit sweetener','1 tsp cake batter extract','½ tsp vanilla bean paste','Pinch of salt','1g (¼ tsp) xanthan gum'],
-   m:null, nt:'The lowest calorie recipe in the entire collection — 83 calories for a FULL PINT!'},
-  {id:23, e:'🦸', n:'Cake Batter DQ Blizzard', c:'Cake Batter', cal:293, p:29, ch:33, f:5,
-   i:['400g fat-free high protein milk','40–45g monk fruit sweetener','1 tsp cake batter extract','Pinch of salt','1g (¼ tsp) xanthan gum','1–2 drops blue food coloring (optional)'],
-   m:'½ pkg Fuul Birthday Cake Cookie Dough bites + 5g rainbow sprinkles',
-   nt:'The blue coloring gives it the iconic Superman/DQ look! Mix in toppings by hand after spinning.'},
-  {id:24, e:'🎉', n:'Birthday Cake', c:'Cake Batter', cal:330, p:37, ch:null, f:null,
-   i:['400g fat-free Fairlife milk','40–45g monk fruit sweetener','1 tsp cake batter extract','Pinch of salt','1g (¼ tsp) xanthan gum'],
-   m:'1 pkg Prime Bites Mini Muffins (195 cal, 15g protein)', nt:null},
-  {id:25, e:'🌀', n:'Cinnamon Bun', c:'Other', cal:250, p:31, ch:14, f:5,
-   i:['400g fat-free Fairlife milk','40–45g monk fruit sweetener','½ tsp cinnamon','1 tsp vanilla bean paste','Pinch of salt','1g (¼ tsp) xanthan gum'],
-   m:'½ Prime Bites Glazed Cinnamon Roll brownie — chop, dust with cinnamon + sweetener, mix in by hand', nt:null},
-  {id:26, e:'🥣', n:'Cinnamon Pebbles', c:'Other', cal:219, p:22, ch:28, f:1,
-   i:['400g fat-free high protein milk','40–45g monk fruit sweetener','1 tsp vanilla bean paste','½ tsp cinnamon','Pinch of salt','1g (¼ tsp) xanthan gum'],
-   m:'20g Cinnamon Pebbles cereal + optional 5g more on top', nt:null},
-  {id:27, e:'🍋', n:'Key Lime Pie', c:'Other', cal:265, p:21, ch:null, f:null,
-   i:['350g fat-free high protein milk','45g monk fruit sweetener','Juice of 2 fresh limes (~75g)','Zest of those same 2 limes','1 tsp vanilla bean paste','Pinch of salt','1g (¼ tsp) xanthan gum'],
-   m:'Teddy Grahams + fat-free Reddi-Whip',
-   nt:'Fresh limes only — bottled lime juice won\'t deliver the same punch. The zest is non-negotiable!'},
-  {id:28, e:'☕', n:'Coffee', c:'Other', cal:150, p:30, ch:2, f:3,
-   i:['1 vanilla protein shake (350–400ml)','20–25g monk fruit sweetener','1 Cometeer coffee pod (or cooled espresso shot)','Pinch of salt','0.5g (⅛ tsp) xanthan gum'],
-   m:null, nt:'150 cal / 30g protein — one of the best macro profiles in the book. Use LESS xanthan here: ⅛ tsp not ¼ tsp.'},
-  {id:29, e:'🍬', n:'Salted Caramel Truffle', c:'Other', cal:295, p:32, ch:52, f:9,
-   i:['1 salted caramel protein shake (Raw Nutrition)','20–25g monk fruit sweetener','½ tsp salt (generous)','1g (¼ tsp) xanthan gum'],
-   m:"5 Hershey's Rolos, chopped (or any caramel-filled chocolate)",
-   nt:'Add Rolos by hand after spinning — skip the Mix-in setting or they will disintegrate.'},
-  {id:31, e:'🥭', n:'Mango Cheesecake', c:'Other', cal:320, p:22, ch:35, f:10,
-   i:['150g overripe carabao mango flesh (~1 medium mango)','250g Darigold whole milk','22g cream cheese','25g allulose or monk fruit sweetener','10g lime juice (~½ lime)','1g salt','1g xanthan gum'],
-   m:'Crushed graham crackers for mango float vibes 🥭', nt:'Blend all ingredients smooth before pouring into pint. Filipino carabao mangoes are very sweet when overripe — taste before freezing and reduce sweetener to 15–20g if needed.'},
-  {id:30, e:'🧈', n:'Brown Butter Choc Chip', c:'Other', cal:303, p:29, ch:28, f:8,
-   i:['400g fat-free high protein milk','40–45g monk fruit sweetener','1 tsp vanilla bean paste','1 tsp unsalted butter','1g LorAnn Brown Butter Bakery Emulsion','Pinch of salt','1g (¼ tsp) xanthan gum'],
-   m:'30–35g protein cookie dough bites + pinch of flaky salt',
-   nt:'LorAnn emulsions are available online. The brown butter flavour is surprisingly complex and addictive.'},
+  // ── CHOCOLATE ──
+  {id:1, e:'🍫', n:'Classic Chocolate', c:'Chocolate', cal:320, p:19, ch:30, f:16,
+   i:['414ml DariGold Whole Milk (1 bottle)','2 tbsp (14g) black cocoa powder','25g monk fruit sweetener','Pinch of salt','1g (¼ tsp) xanthan gum'],
+   m:null,
+   nt:'Black cocoa gives a deep, fudgy flavour — use it over regular cocoa for best results. Blend everything before pouring into the pint.'},
+
+  {id:2, e:'🌶️', n:'Mexican Chocolate', c:'Chocolate', cal:320, p:19, ch:30, f:16,
+   i:['414ml DariGold Whole Milk (1 bottle)','2 tbsp (14g) cocoa powder','¼ tsp cinnamon','2–3 pinches cayenne pepper','25g monk fruit sweetener','Pinch of salt','1g (¼ tsp) xanthan gum'],
+   m:null,
+   nt:'Start with 2 pinches of cayenne — it gets spicy FAST. Taste before freezing and add more if you want heat.'},
+
+  {id:3, e:'🥜', n:'Chocolate Peanut Butter', c:'Chocolate', cal:390, p:21, ch:30, f:23,
+   i:['414ml DariGold Whole Milk (1 bottle)','1 tbsp (7g) cocoa powder','1 tbsp (16g) natural peanut butter','20g monk fruit sweetener','Pinch of salt','1g (¼ tsp) xanthan gum'],
+   m:'Extra drizzle of peanut butter on top after spinning',
+   nt:'Blend everything together — the PB emulsifies into the milk and creates a super creamy base. No chunky bits, just smooth chocolate peanut butter flavour throughout.'},
+
+  {id:4, e:'🌿', n:'Mint Chocolate', c:'Chocolate', cal:320, p:19, ch:30, f:16,
+   i:['414ml DariGold Whole Milk (1 bottle)','2 tbsp (14g) black cocoa powder','⅛ tsp peppermint extract','25g monk fruit sweetener','Pinch of salt','1g (¼ tsp) xanthan gum'],
+   m:'10g mini chocolate chips stirred in by hand after spinning',
+   nt:'⅛ tsp peppermint is plenty — a little goes a long way. Taste the mix before freezing.'},
+
+  // ── VANILLA ──
+  {id:5, e:'🍦', n:'Classic Vanilla', c:'Vanilla', cal:275, p:15, ch:22, f:14,
+   i:['414ml DariGold Whole Milk (1 bottle)','1 tsp vanilla bean paste','25g monk fruit sweetener','Pinch of salt','1g (¼ tsp) xanthan gum'],
+   m:null,
+   nt:'Use vanilla bean PASTE not extract — the little black specks and deeper flavour are worth it. This is your master base for almost any vanilla variation.'},
+
+  {id:6, e:'🍓', n:'Strawberry', c:'Vanilla', cal:305, p:16, ch:30, f:14,
+   i:['414ml DariGold Whole Milk (1 bottle)','10g freeze-dried strawberries (blended to powder)','1 tsp vanilla bean paste','20g monk fruit sweetener','Pinch of salt','1g (¼ tsp) xanthan gum'],
+   m:'Extra freeze-dried strawberry crumbles on top after spinning',
+   nt:'Blend the freeze-dried strawberries into a powder first for the smoothest colour and flavour. Fresh or frozen strawberries add too much water and ruin the texture.'},
+
+  {id:7, e:'🍪', n:'Cookies & Cream', c:'Vanilla', cal:375, p:17, ch:36, f:18,
+   i:['414ml DariGold Whole Milk (1 bottle)','1 tsp vanilla bean paste','25g monk fruit sweetener','Pinch of salt','1g (¼ tsp) xanthan gum'],
+   m:'3 Oreo Thins (cream removed) — crush and add via Mix-In setting',
+   nt:'Remove the Oreo cream to keep the texture right — the cream melts into the ice cream and makes it oily. Just the wafer!'},
+
+  {id:8, e:'☕', n:'Coffee Crème', c:'Vanilla', cal:280, p:15, ch:23, f:14,
+   i:['414ml DariGold Whole Milk (1 bottle)','1 tsp instant espresso powder (or 1 shot cooled espresso)','1 tsp vanilla bean paste','25g monk fruit sweetener','Pinch of salt','1g (¼ tsp) xanthan gum'],
+   m:null,
+   nt:'Dissolve the espresso powder in a splash of warm milk before mixing everything together. Cool completely before pouring into the pint — hot liquid ruins the freeze.'},
+
+  {id:9, e:'🍌', n:'Banana Foster', c:'Vanilla', cal:286, p:12, ch:39, f:10,
+   i:['300ml DariGold Whole Milk','1 medium ripe banana (100g) — the riper the better','½ tsp vanilla bean paste','15g monk fruit sweetener','Pinch of salt','1g (¼ tsp) xanthan gum'],
+   m:'Caramel drizzle + pinch of cinnamon on top after spinning',
+   nt:'Use a very ripe banana with lots of brown spots — it blends smoother and tastes way sweeter. Blend everything together until completely smooth before freezing.'},
+
+  // ── FILIPINO ──
+  {id:10, e:'🟣', n:'Ube', c:'Filipino', cal:275, p:15, ch:22, f:14,
+   i:['414ml DariGold Whole Milk (1 bottle)','1 tsp ube extract (or 1 tbsp ube halaya jam)','½ tsp vanilla bean paste','20g monk fruit sweetener','1–2 drops purple food colouring (optional)','1g (¼ tsp) xanthan gum'],
+   m:'Swirl of ube halaya jam on top after spinning',
+   nt:'Ube extract gives the colour and flavour without extra calories. If using ube halaya, add it to the blend — macros will be slightly higher (~+50 cal, +10g carb from the jam).'},
+
+  {id:11, e:'🌿', n:'Pandan Coconut', c:'Filipino', cal:275, p:15, ch:22, f:14,
+   i:['414ml DariGold Whole Milk (1 bottle)','½ tsp pandan extract','1 tsp coconut extract','20g monk fruit sweetener','Pinch of salt','1g (¼ tsp) xanthan gum'],
+   m:'Toasted desiccated coconut sprinkled on top after spinning',
+   nt:'Pandan extract varies wildly in intensity — start with ¼ tsp, taste, and add more before freezing. It should smell like fresh pandan leaves, not artificial candy.'},
+
+  {id:12, e:'🥭', n:'Carabao Mango', c:'Filipino', cal:276, p:11, ch:37, f:10,
+   i:['280ml DariGold Whole Milk','150g overripe carabao mango flesh (~1 medium mango)','15g monk fruit sweetener','Juice of ½ calamansi','1g (¼ tsp) xanthan gum'],
+   m:'Fresh mango chunks on top after spinning',
+   nt:'Use very overripe mango — the sweeter and softer the better. Carabao mango is super sweet when fully ripe so taste before adding more sweetener. Blend completely smooth before freezing.'},
+
+  {id:13, e:'🍮', n:'Leche Flan', c:'Filipino', cal:335, p:16, ch:34, f:15,
+   i:['390ml DariGold Whole Milk','25g sweetened condensed milk','1 tsp vanilla bean paste','Pinch of salt','1g (¼ tsp) xanthan gum'],
+   m:'Caramel syrup drizzled into the hole before spinning',
+   nt:'The condensed milk is what gives it that signature eggy-sweet leche flan flavour. Pour the caramel INTO the hole before you spin — it creates beautiful ribbons through the whole pint.'},
+
+  // ── OTHER ──
+  {id:14, e:'🍵', n:'Matcha', c:'Other', cal:295, p:17, ch:25, f:14,
+   i:['414ml DariGold Whole Milk (1 bottle)','1 tbsp (8g) ceremonial or culinary grade matcha powder','25g monk fruit sweetener','Pinch of salt','1g (¼ tsp) xanthan gum'],
+   m:'Matcha powder dusted on top + a drizzle of honey',
+   nt:'Whisk the matcha with a tiny bit of warm milk first to dissolve it before adding everything else — this prevents clumps and gives a smoother colour. Ceremonial grade tastes better but culinary works fine.'},
+
+  {id:15, e:'🍯', n:'Honey Vanilla', c:'Other', cal:340, p:15, ch:39, f:14,
+   i:['414ml DariGold Whole Milk (1 bottle)','1 tbsp (21g) raw honey','1 tsp vanilla bean paste','Pinch of salt','1g (¼ tsp) xanthan gum'],
+   m:null,
+   nt:'Skip the monk fruit — the honey is your only sweetener here so its flavour really comes through. Use raw honey for the most complex taste. Warm it slightly if it\'s thick so it blends smoothly.'},
+
+  {id:16, e:'🥜', n:'Peanut Butter', c:'Other', cal:415, p:21, ch:27, f:26,
+   i:['414ml DariGold Whole Milk (1 bottle)','1.5 tbsp (24g) natural peanut butter','20g monk fruit sweetener','Pinch of flaky salt','1g (¼ tsp) xanthan gum'],
+   m:'Peanut butter drizzle + crushed peanuts on top after spinning',
+   nt:'The fat from whole milk + PB makes this the richest, creamiest base in the collection — it spins incredibly smooth. Use natural PB (just peanuts + salt) not the sugary commercial kind.'},
+
+  {id:17, e:'🍋', n:'Calamansi Citrus', c:'Other', cal:266, p:14, ch:25, f:13,
+   i:['380ml DariGold Whole Milk','Juice of 6–8 fresh calamansi (~50ml)','25g monk fruit sweetener','Pinch of salt','1g (¼ tsp) xanthan gum'],
+   m:null,
+   nt:'Calamansi is more tart than lime so taste the mix and add more sweetener if needed. Squeeze fresh — bottled calamansi juice doesn\'t hit the same. The acidity means this mix looks slightly thinner than others before freezing — that\'s normal.'},
 ];
 
 const STEPS = [
-  'Blend all base ingredients together.',
+  'Blend all base ingredients together until smooth.',
   'Pour into your Ninja Creami pint and freeze for at least 16 hours.',
   'Run the pint under hot water for 60 seconds.',
   "Spin on the 'Lite Ice Cream' setting.",
@@ -330,8 +391,21 @@ let actCat = 'All', srchVal = '';
 
 function launch() {
   document.getElementById('cover').classList.add('gone');
+  document.getElementById('home').classList.add('on');
+}
+
+function enterSection() {
+  document.getElementById('home').classList.remove('on');
   document.getElementById('app').classList.add('on');
   renderTabs(); renderList();
+}
+
+function goHome() {
+  document.getElementById('app').classList.remove('on');
+  document.getElementById('home').classList.add('on');
+  srchVal = '';
+  actCat = 'All';
+  document.getElementById('srch').value = '';
 }
 
 function renderTabs() {
