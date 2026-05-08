@@ -254,7 +254,7 @@ body{font-family:'Nunito',sans-serif;background:var(--bg);color:var(--text);min-
         <div class="hcard-shine"></div>
         <span class="hcard-emoji">🫙</span>
         <div class="hcard-title">High Protein<br>Greek Yogurt Fro-Yo</div>
-        <div class="hcard-desc">10 recipes · High protein fro-yo</div>
+        <div class="hcard-desc">14 recipes · High protein fro-yo</div>
         <div class="hcard-tags">
           <span class="hcard-tag">🍓 Fruity</span>
           <span class="hcard-tag">🍫 Indulgent</span>
@@ -294,7 +294,7 @@ body{font-family:'Nunito',sans-serif;background:var(--bg);color:var(--text);min-
         <button class="back-btn" onclick="goHome()">‹</button>
         <div class="shdr-title"><img src="logo.svg" alt=""> Greek Yogurt Fro-Yo</div>
       </div>
-      <div class="shdr-pill" id="gy-cnt">10 recipes</div>
+      <div class="shdr-pill" id="gy-cnt">14 recipes</div>
     </div>
     <div class="srch-wrap">
       <input class="srch srch-gy" type="text" placeholder="Search flavors…" id="gy-srch" oninput="doFilter('gy')">
@@ -480,6 +480,22 @@ const GY_R = [
   {id:110, e:'🍬', n:'Salted Caramel Fro-Yo',    c:'Indulgent', cal:265, p:25, ch:15, f:5,
    extras:['1 tsp caramel extract','Extra pinch of salt (generous!)'],
    m:'Chopped Rolos or caramel-filled chocolate — add by hand after spinning', nt:'Add Rolos by hand after spinning — the Mix-In setting destroys them. They should be in whole small chunks.'},
+
+  // ── FRUITY additions ──
+  {id:111, e:'🍌', n:'Banana Crumble',          c:'Fruity',    cal:295, p:26, ch:24, f:5,
+   extras:['1 small ripe banana (~80g) blended in','½ tsp vanilla extract','Pinch of cinnamon'],
+   m:'Crushed graham crackers + pinch of cinnamon sugar on top', nt:'Use a very ripe, spotty banana — sweeter and blends smoother. The cinnamon makes it taste like warm banana bread.'},
+  {id:114, e:'🍓🍌', n:'Strawberry Banana',      c:'Fruity',    cal:285, p:25, ch:22, f:5,
+   extras:['60g frozen strawberries blended in','60g ripe banana blended in','½ tsp vanilla extract'],
+   m:'Crushed graham crackers', nt:'Blend the frozen strawberries and banana together before adding the rest of the base — it helps everything incorporate smoothly.'},
+
+  // ── INDULGENT additions ──
+  {id:112, e:'🍪', n:'Banana Biscoff',           c:'Indulgent', cal:315, p:25, ch:28, f:6,
+   extras:['1 small ripe banana (~80g) blended in','1 tsp Biscoff spread blended into the base'],
+   m:'2 crushed Biscoff cookies crumbled on top after spinning', nt:'Blend the Biscoff spread into the liquid base before freezing — don\'t just swirl it in or it\'ll create icy streaks. The banana + Biscoff combo is dangerously good.'},
+  {id:113, e:'🖤', n:'Cookies and Cream',        c:'Indulgent', cal:280, p:27, ch:18, f:5,
+   extras:['½ tsp vanilla extract','5g black cocoa powder blended in'],
+   m:'4 Oreo Thins (cream removed) — add via Mix-In setting', nt:'Black cocoa gives it a deeper, richer chocolate base without adding much fat. Remove the Oreo cream before mixing in — just the wafer.'},
 ];
 
 const GY_STEPS = [
