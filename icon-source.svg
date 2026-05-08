@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff6b9d"/>
+      <stop offset="100%" stop-color="#c77dff"/>
+    </linearGradient>
+    <linearGradient id="shine" x1="0%" y1="0%" x2="60%" y2="100%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.28)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.15)"/>
+      <stop offset="100%" stop-color="rgba(199,125,255,0.25)"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Full background gradient -->
+  <rect width="512" height="512" fill="url(#bg)"/>
+
+  <!-- Soft radial glow overlay -->
+  <rect width="512" height="512" fill="url(#glow)"/>
+
+  <!-- Shine top-left -->
+  <ellipse cx="190" cy="140" rx="160" ry="100" fill="url(#shine)" opacity="0.5"/>
+
+  <!-- Decorative blobs -->
+  <circle cx="60"  cy="60"  r="90"  fill="rgba(255,255,255,0.06)"/>
+  <circle cx="460" cy="450" r="110" fill="rgba(199,125,255,0.18)"/>
+  <circle cx="440" cy="80"  r="60"  fill="rgba(255,107,157,0.2)"/>
+  <circle cx="70"  cy="440" r="70"  fill="rgba(255,217,61,0.12)"/>
+
+  <!-- Bold C — stroke arc, center (256,256), radius 148 -->
+  <!-- M = start point at ~55° above horizontal right side, sweeps CCW to ~55° below -->
+  <!-- With center (256,256) r=148, 55° opening angle: x=256+148*cos(55°)=256+84.9=341, y=256±148*sin(55°)=256±121.2 -->
+  <path d="M 341 135 A 148 148 0 1 0 341 377"
+        fill="none"
+        stroke="white"
+        stroke-width="68"
+        stroke-linecap="round"
+        opacity="0.97"/>
+
+  <!-- Yellow 5-point star — top right -->
+  <polygon
+    points="398,68 406,92 432,92 412,108 419,132 398,117 377,132 384,108 364,92 390,92"
+    fill="#ffd93d"/>
+
+  <!-- Orange mini star — bottom left -->
+  <polygon
+    points="106,370 110,382 122,382 113,390 116,402 106,395 96,402 99,390 90,382 102,382"
+    fill="#ff9a3c" opacity="0.9"/>
+
+  <!-- Mint dot — lower right -->
+  <circle cx="418" cy="400" r="14" fill="#6bcb77" opacity="0.85"/>
+
+  <!-- White sparkle dots -->
+  <circle cx="440" cy="210" r="9"  fill="rgba(255,255,255,0.6)"/>
+  <circle cx="88"  cy="160" r="7"  fill="rgba(255,255,255,0.5)"/>
+  <circle cx="72"  cy="310" r="6"  fill="rgba(255,255,255,0.4)"/>
+  <circle cx="448" cy="340" r="5"  fill="rgba(255,255,255,0.38)"/>
+
+  <!-- Small 4-point star — top left area -->
+  <path d="M 130,95 L 136,112 L 153,118 L 136,124 L 130,141 L 124,124 L 107,118 L 124,112 Z"
+        fill="rgba(255,255,255,0.55)"/>
+</svg>
